@@ -1,11 +1,22 @@
 body {
 	margin: 0;
-	padding: 15px;
+	padding: 20px;
 	font-size: 16px;
+	font-family: Source Sans Pro;
 }
 
 h1 {
 	font-size: 20px;
+	width: 200px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 'light';
 }
 
 .trigram {
