@@ -1,0 +1,267 @@
+[
+	{
+		"title": "Registration + Coffee",
+		"start": "2017-09-07T09:00:00",
+		"duration": "30min"
+	},
+	{
+		"title": "Opening",
+		"start": "2017-09-07T09:30:00",
+		"duration": "10min"
+	},
+	{
+		"title": "Keynote: The State Of JavaScript",
+		"start": "2017-09-07T09:40:00",
+		"duration": "30min",
+		"speaker": " Sacha Greif "
+	},
+	{
+		"title": " 5 architectures of asynchronous JavaScript",
+		"start": "2017-09-07T10:10:00",
+		"duration": "30min",
+		"speaker": " Tomasz Ducin "
+	},
+	{
+		"title": "Break",
+		"start": "2017-09-07T11:10:00",
+		"duration": "15min"
+	},
+	{
+		"title": "Best Practices for GraphQL and GraphQL Subscriptions at Scale",
+		"start": "2017-09-07T11:25:00",
+		"duration": "30min",
+		"speaker": " Laney Kuenzel Zamore & Adam Kramer "
+	},
+	{
+		"title": "Sociolinguistics and the Javascript community: a love story",
+		"start": "2017-09-07T11:55:00",
+		"duration": "15min",
+		"speaker": " Harriet Lawrence "
+	},
+	{
+		"title": "Lightning talk: Service Workers, use them",
+		"start": "2017-09-07T12:10:00",
+		"duration": "5min",
+		"speaker": "Pontus Lundin - @pontahontas"
+	},
+	{
+		"title": "Lightning talk: From citizen initiative to governmental agency process and back again",
+		"start": "2017-09-07T12: 15: 00",
+		"duration": "5min",
+		"speaker": "Johan Öbrink - @johanobrink"
+	},
+	{
+		"title": "Lunch",
+		"start": "2017-09-07T12: 20: 00",
+		"duration": "70min"
+	},
+	{
+		"title": "You're only supposed to blow the bloody doors off!",
+		"start": "2017-09-07T13: 30: 00",
+		"duration": "30min",
+		"speaker": " Léonie Watson"
+	},
+	{
+		"title": "A Brief History of Prototypes",
+		"start": "2017-09-07T14: 00: 00",
+		"duration": "30min",
+		"speaker": " Katerina Marchán"
+	},
+	{
+		"title": "Swedish FIKA!",
+		"start": "2017-09-07T14: 30: 00",
+		"duration": "30min"
+	},
+	{
+		"title": "Best Practices for reusable UI components",
+		"start": "2017-09-07T15: 00: 00",
+		"duration": "30min",
+		"speaker": " Mars Jullian"
+	},
+	{
+		"title": "The Design and Evolution of Event-Driven Databases",
+		"start": "2017-09-07T15: 30: 00",
+		"duration": "30min",
+		"speaker": " Mark Nadal"
+	},
+	{
+		"title": "Lightning talk: Writing cross-platform editor plugins",
+		"start": "2017-09-07T16: 00: 00",
+		"duration": "5min",
+		"speaker": "Henric Trotzig"
+	},
+	{
+		"title": "Lightning talk: Payment Request API in a React high order component",
+		"start": "2017-09-07T16: 05: 00",
+		"duration": "5min",
+		"speaker": "Marco Lanaro"
+	},
+	{
+		"title": "Break",
+		"start": "2017-09-07T16: 10: 00",
+		"duration": "30min"
+	},
+	{
+		"title": "Solving layout problems with CSS Grid and friends",
+		"start": "2017-09-07T16: 40: 00",
+		"duration": "30min",
+		"speaker": " Rachel Andrew"
+	},
+	{
+		"title": "Keynote: The hilarious misadventures of being a platform downstream from your language",
+		"start": "2017-09-07T17: 10: 00",
+		"duration": "30min",
+		"speaker": " Myles Borins"
+	},
+	{
+		"title": "Closing",
+		"start": "2017-09-07T17: 40: 00",
+		"duration": "10min"
+	},
+	{
+		"title": "Techno Ping Pong",
+		"start": "2017-09-07T17: 50: 00",
+		"speaker": "There will be beer, food, techno, ping and pong all evening!"
+	},
+	{
+		"title": "VulcanJS workshop (60 seats)",
+		"start": "2017-09-07T18: 30: 00",
+		"duration": "60min",
+		"speaker": "Get an introduction to VulcanJS from Sacha Greif, read more and sign up here."
+	},
+	{
+		"title": "The end",
+		"start": "2017-09-07T22: 00: 00"
+	},
+	{
+		"title": "Equality Pep-talk Breakfast (60 seats)",
+		"start": "2017-09-08T08: 00: 00",
+		"duration": "60min",
+		"speaker": " Start your second day of Nordic.js in the best way possible by participating in the Equality ​Pep-talk Breakfast by Netlight. Sign up here!"
+	},
+	{
+		"title": "Coffee + Registration",
+		"start": "2017-09-08T09: 00: 00",
+		"duration": "20min"
+	},
+	{
+		"title": "Opening",
+		"start": "2017-09-08T09: 20: 00",
+		"duration": "10min"
+	},
+	{
+		"title": "Keynote: The future of the web and the curious case of the unintended silo",
+		"start": "2017-09-08T09: 30: 00",
+		"duration": "50min",
+		"speaker": " Paul Kinlan"
+	},
+	{
+		"title": "Who Cares Why Undefined Is Not a Function",
+		"start": "2017-09-08T10: 20: 00",
+		"duration": "15min",
+		"speaker": " Tereza Sokol"
+	},
+	{
+		"title": "Break",
+		"start": "2017-09-08T10: 35: 00",
+		"duration": "30min"
+	},
+	{
+		"title": "Fun With Serverless Javascript",
+		"start": "2017-09-08T11: 05: 00",
+		"duration": "30min",
+		"speaker": " Lorna Mitchell"
+	},
+	{
+		"title": "Down the Rabbit Hole: JS in Wonderland",
+		"start": "2017-09-08T11: 35: 00",
+		"duration": "15min",
+		"speaker": " Claudia Hernández"
+	},
+	{
+		"title": "Lightning talk: Renderless React Components",
+		"start": "2017-09-08T11: 50: 00",
+		"duration": "5min",
+		"speaker": "Findlay Hannam"
+	},
+	{
+		"title": "Lightning talk: Machine Learning Intuitions for DeepLearn.js",
+		"start": "2017-09-08T11: 55: 00",
+		"duration": "5min",
+		"speaker": "Amir Hossein Rahnama"
+	},
+	{
+		"title": "Lunch",
+		"start": "2017-09-08T12: 00: 00",
+		"duration": "90min"
+	},
+	{
+		"title": "P2P",
+		"start": "2017-09-08T13: 20: 00",
+		"duration": "30min",
+		"speaker": " Feross Aboukhadijeh"
+	},
+	{
+		"title": "Beyond the bubble",
+		"start": "2017-09-08T13: 50: 00",
+		"duration": "30min",
+		"speaker": " Ben Schwarz"
+	},
+	{
+		"title": "Swedish FIKA!",
+		"start": "2017-09-08T14: 20: 00",
+		"duration": "30min"
+	},
+	{
+		"title": "Reactive Web Animations with RxJS",
+		"start": "2017-09-08T14: 50: 00",
+		"duration": "30min",
+		"speaker": " David Khourshid"
+	},
+	{
+		"title": "Lightning talk: BikeShed - JavaScript in and on tvOS",
+		"start": "2017-09-08T15: 20: 00",
+		"duration": "5min",
+		"speaker": "Joel Arvidsson"
+	},
+	{
+		"title": "Lightning talk: Use any Npm module as a distributed scalable microservice, as easy as NodeJS' \"require\"",
+		"start": "2017-09-08T15:25:00",
+		"duration": "5min",
+		"speaker": "Joakim Carlstein"
+	},
+	{
+		"title": "Break",
+		"start": "2017-09-08T15: 50: 00",
+		"duration": "20min"
+	},
+	{
+		"title": "TBA.js",
+		"start": "2017-09-08T16: 10: 00",
+		"duration": "30min",
+		"speaker": " Guillermo Rauch"
+	},
+	{
+		"title": "Keynote: Building Inclusive Communities",
+		"start": "2017-09-08T16: 40: 00",
+		"duration": "30min",
+		"speaker": " Karolina Szczur"
+	},
+	{
+		"title": "Closing",
+		"start": "2017-09-08T17: 10: 00",
+		"duration": "10min"
+	},
+	{
+		"title": "Party / Festen",
+		"start": "2017-09-08T17: 20: 00",
+		"duration": "540min",
+		"speaker": " Our grand after party called \"Festen\". Read more and invite your friends! Open until 02:00. "
+	},
+	{
+		"title": "Code in the Dark!",
+		"start": "2017-09-08T18:00:00",
+		"duration": "120min",
+		"speaker": " Read more and signup "
+	}
+]
