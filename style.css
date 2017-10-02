@@ -14,12 +14,32 @@ h1 {
 	text-align: center;
 }
 
-h2 {
-	font-size: 18px;
-	font-weight: 'light';
-}
-
 .trigram {
 	float: right;
 	color: #243EFF;
+}
+
+.days {
+	height: 28px;
+	margin: 0 5% 10px 5%;
+	border-bottom: 1px solid #E3E3E3;
+}
+
+.days__day {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 0;
+}
+
+.days__day--left {
+	float: left;
+}
+
+.days__day--right {
+	float: right;
+}
+
+.days__day--pink {
+	color: #FF2DF1;
 }
