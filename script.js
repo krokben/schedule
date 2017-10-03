@@ -123,6 +123,19 @@ const events = [
 	}
 ];
 
+var events2 = [];
+
+function getJSON() {
+	fetch('schedule.json')
+		.then(resp => resp.json())
+		.then(resp => {
+			events2 = resp.map(event => Object.assign({}, event, {type: setType(event)}));
+			console.log(events2)
+			render();
+		})
+	;
+}
+
 function calcSize(dur) {
 	if (dur < 30) {
 		return 'event--s';
@@ -135,48 +148,78 @@ function calcSize(dur) {
 	}
 }
 
-events.forEach(event => {
-	if (event.type === 'misc') {
-		eventContainer.innerHTML += `
-			<div class="event-misc ${calcSize(event.duration)}">
-				<div class="event__time">
-					<div class="event__start">${event.start}</div>
-					<div class="event__line">|</div>
-					<div class="event__end">${event.end}</div>
-				</div>
-				<div class="event__text">
-					<h3 class="event__header">${event.title}</h3>
-				</div>
-			</div>
-		`;
-	} else if (event.type === 'talk') {
-		eventContainer.innerHTML += `
-			<div class="event ${calcSize(event.duration)}">
-				<div class="event__time">
-					<div class="event__start">${event.start}</div>
-					<div class="event__line">|</div>
-					<div class="event__end">${event.end}</div>
-				</div>
-				<div class="event__text">
-					<h3 class="event__header event__header--blue">${event.title}</h3>
-					<p class="event__speaker">${event.speaker}</p>
-				</div>
-			</div>
-		`;
-	} else if (event.type === 'lightning') {
-		eventContainer.innerHTML += `
-			<div class="event ${calcSize(event.duration)}">
-				<div class="event__time">
-					<div class="event__start">${event.start}</div>
-					<div class="event__line">|</div>
-					<div class="event__end">${event.end}</div>
-				</div>
-				<div class="event__text">
-					<h3 class="event__header event__header--blue">${event.title}</h3>
-					<p class="event__speaker">${event.speaker}</p>
-					<a class="event__link" href="${event.link}">${event.handle}</a>
-				</div>
-			</div>
-		`;
+function excerpt(title) {
+	if (title.length > 75) {
+		const slice = title.slice(0, 75);
+		const array = slice.split(' ');
+		array.pop();
+		array.push('...');
+		return array.join(' ');
 	}
-});
+
+	return title;
+}
+
+function setType(event) {
+	if (event.speaker) {
+		if (event.duration > 5) {
+			return 'talk';
+		} else {
+			return 'lightning';
+		}
+	} else {
+		return 'misc';
+	}
+}
+
+function render() {
+	events2.forEach(event => {
+		if (event.type === 'misc') {
+			eventContainer.innerHTML += `
+				<div class="event-misc ${calcSize(event.duration)}">
+					<div class="event__time">
+						<div class="event__start">${event.start}</div>
+						<div class="event__line">|</div>
+						<div class="event__end">${event.end}</div>
+					</div>
+					<div class="event__text">
+						<h3 class="event__header">${excerpt(event.title)}</h3>
+					</div>
+				</div>
+			`;
+		} else if (event.type === 'talk') {
+			eventContainer.innerHTML += `
+				<div class="event ${calcSize(event.duration)}">
+					<div class="event__time">
+						<div class="event__start">${event.start}</div>
+						<div class="event__line">|</div>
+						<div class="event__end">${event.end}</div>
+					</div>
+					<div class="event__text">
+						<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
+						<p class="event__speaker">${event.speaker}</p>
+					</div>
+				</div>
+			`;
+		} else if (event.type === 'lightning') {
+			eventContainer.innerHTML += `
+				<div class="event ${calcSize(event.duration)}">
+					<div class="event__time">
+						<div class="event__start">${event.start}</div>
+						<div class="event__line">|</div>
+						<div class="event__end">${event.end}</div>
+					</div>
+					<div class="event__text">
+						<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
+						<p class="event__speaker">
+							${event.speaker} - <a class="event__link" href="${event.link}">${event.handle}</a>
+						</p>
+					</div>
+				</div>
+			`;
+		}
+	});
+}
+
+
+getJSON();
