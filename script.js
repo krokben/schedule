@@ -126,11 +126,10 @@ const events = [
 var events2 = [];
 
 function getJSON() {
-	fetch('schedule.json')
+	fetch('schedule2.json')
 		.then(resp => resp.json())
 		.then(resp => {
-			events2 = resp.map(event => Object.assign({}, event, {type: setType(event)}));
-			console.log(events2)
+			events2 = resp;
 			render();
 		})
 	;
@@ -173,7 +172,7 @@ function setType(event) {
 }
 
 function render() {
-	events2.forEach(event => {
+	events2.filter(event => event.day === "1").forEach(event => {
 		if (event.type === 'misc') {
 			eventContainer.innerHTML += `
 				<div class="event-misc ${calcSize(event.duration)}">
