@@ -1,136 +1,24 @@
 const eventContainer = document.querySelector('.event-container');
+const day1 = document.querySelector('#day1');
+const day2 = document.querySelector('#day2');
 
-const events = [
-	{
-		id: 1,
-		day: 1,
-		type: 'misc',
-		start: '09:00',
-		end: '09:30',
-		duration: 30,
-		title: 'Registration + Coffee'
-	},
-	{
-		id: 2,
-		day: 1,
-		type: 'misc',
-		start: '09:30',
-		end: '09:40',
-		duration: 10,
-		title: 'Opening'
-	},
-	{
-		id: 3,
-		day: 1,
-		type: 'talk',
-		start: '09:40',
-		end: '10:10',
-		duration: 30,
-		title: 'Keynote: The State of JavaScript',
-		speaker: 'Sacha Greif'
-	},
-	{
-		id: 4,
-		day: 1,
-		type: 'talk',
-		start: '10:10',
-		end: '11:10',
-		duration: 60,
-		title: '5 Architectures of Asynchronous JavaScript',
-		speaker: 'Tomasz Ducin'
-	},
-	{
-		id: 5,
-		day: 1,
-		type: 'misc',
-		start: '11:10',
-		end: '11:25',
-		duration: 15,
-		title: 'Break'
-	},
-	{
-		id: 6,
-		day: 1,
-		type: 'talk',
-		start: '11:25',
-		end: '11:55',
-		duration: 30,
-		title: 'Best Practices for GraphQL and GraphQL Subscriptions at Scale',
-		speaker: 'Laney Kuenzel Zamore & Adam Kramer'
-	},
-	{
-		id: 7,
-		day: 1,
-		type: 'talk',
-		start: '11:55',
-		end: '12:10',
-		duration: 15,
-		title: 'Sociolinguistics and the JavaScript Community: A Love Story',
-		speaker: 'Harriet Lawrence'
-	},
-	{
-		id: 8,
-		day: 1,
-		type: 'lightning',
-		start: '12:10',
-		end: '12:15',
-		duration: 5,
-		title: 'Lightning Talk: Service Workers, use them',
-		speaker: 'Pontus Lundin',
-		link: 'https://twitter.com/pontahontas',
-		handle: '@pontahontas'
-	},
-	{
-		id: 9,
-		day: 1,
-		type: 'lightning',
-		start: '12:15',
-		end: '12:20',
-		duration: 5,
-		title: 'Lightning Talk: From Citizen Initiative to Government Agency Process and Back Again',
-		speaker: 'Johan Öbrink',
-		link: 'https://twitter.com/johanobrink',
-		handle: '@johanobrink'
-	},
-	{
-		id: 10,
-		day: 1,
-		type: 'misc',
-		start: '12:20',
-		end: '13:30',
-		duration: 70,
-		title: 'Lunch'
-	},
-	{
-		id: 11,
-		day: 1,
-		type: 'talk',
-		start: '13:30',
-		end: '14:00',
-		duration: 30,
-		title: "You're only supposed to blow the bloody doors off!",
-		speaker: 'Léonie Watson'
-	},
-	{
-		id: 12,
-		day: 1,
-		type: 'talk',
-		start: '14:00',
-		end: '14:30',
-		duration: 30,
-		title: 'A Brief History of Prototypes',
-		speaker: 'Katerina Marchán'
-	}
-];
+// Global Variables
+let events = [];
+const now = new Date();
 
-var events2 = [];
+// Init
+getJSON();
+
+// Event Listeners
+day1.addEventListener('click', () => render('7'));
+day2.addEventListener('click', () => render('8'));
 
 function getJSON() {
-	fetch('schedule2.json')
+	fetch('schedule.json')
 		.then(resp => resp.json())
 		.then(resp => {
-			events2 = resp;
-			render();
+			events = resp;
+			render('7');
 		})
 	;
 }
@@ -159,39 +47,43 @@ function excerpt(title) {
 	return title;
 }
 
-function setType(event) {
-	if (event.speaker) {
-		if (event.duration > 5) {
-			return 'talk';
-		} else {
-			return 'lightning';
-		}
-	} else {
-		return 'misc';
+function hasBeen(event) {
+	const start = event.start.split(':');
+	const end = event.end.split(':');
+	const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), start[0], start[1]);
+	const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), end[0], end[1]);
+
+
+	if (now > endTime && event.day === '7') {
+		return 'event--past';
+	} else if (now < endTime && now > startTime) {
+		return 'event--current';
 	}
 }
 
-function render() {
-	events2.filter(event => event.day === "1").forEach(event => {
+
+function render(day) {
+	eventContainer.innerHTML = '';
+	events.filter(event => event.day === day).forEach(event => {
 		if (event.type === 'misc') {
 			eventContainer.innerHTML += `
-				<div class="event-misc ${calcSize(event.duration)}">
+				<div class="event-misc ${calcSize(event.duration)} ${hasBeen(event)}">
 					<div class="event__time">
 						<div class="event__start">${event.start}</div>
-						<div class="event__line">|</div>
+						<div class="event__line"></div>
 						<div class="event__end">${event.end}</div>
 					</div>
-					<div class="event__text">
+					<div class="event__text event__text--pink ${calcSize(event.duration) === 'event--xl' ? 'event__text--top' : null}">
 						<h3 class="event__header">${excerpt(event.title)}</h3>
 					</div>
 				</div>
 			`;
 		} else if (event.type === 'talk') {
 			eventContainer.innerHTML += `
-				<div class="event ${calcSize(event.duration)}">
+				<div class="event ${calcSize(event.duration)} ${hasBeen(event)}">
 					<div class="event__time">
 						<div class="event__start">${event.start}</div>
-						<div class="event__line">|</div>
+						<div class="event__line"></div>
 						<div class="event__end">${event.end}</div>
 					</div>
 					<div class="event__text">
@@ -202,23 +94,43 @@ function render() {
 			`;
 		} else if (event.type === 'lightning') {
 			eventContainer.innerHTML += `
-				<div class="event ${calcSize(event.duration)}">
+				<div class="event ${calcSize(event.duration)} ${hasBeen(event)}">
 					<div class="event__time">
 						<div class="event__start">${event.start}</div>
-						<div class="event__line">|</div>
+						<div class="event__line"></div>
 						<div class="event__end">${event.end}</div>
 					</div>
 					<div class="event__text">
 						<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
 						<p class="event__speaker">
-							${event.speaker} - <a class="event__link" href="${event.link}">${event.handle}</a>
+							${event.speaker}${event.link ? `- <a class="event__link" target="_blank" href="${event.link}">${event.handle}</a>` : ''}
 						</p>
+					</div>
+				</div>
+			`;
+		} else if (event.type === 'overlap') {
+			eventContainer.children[eventContainer.children.length - 1].innerHTML += `
+				<div class="event event--overlap ${calcSize(event.duration)} ${hasBeen(event)}">
+					<div class="event__time">
+						<div class="event__start">${event.start}</div>
+						<div class="event__line"></div>
+						<div class="event__end">${event.end}</div>
+					</div>
+					<div class="event__text">
+						<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
+						<p class="event__speaker">${event.speaker}</p>
 					</div>
 				</div>
 			`;
 		}
 	});
+
+	// Determine which day to render
+	if (day === '7') {
+		day1.classList.add('days__day--pink');
+		day2.classList.remove('days__day--pink');
+	} else {
+		day2.classList.add('days__day--pink');
+		day1.classList.remove('days__day--pink');
+	}
 }
-
-
-getJSON();
