@@ -22,7 +22,8 @@
 		"end": "10:10",
 		"title": "Keynote: The State Of JavaScript",
 		"duration": "30",
-		"speaker": " Sacha Greif "
+		"speaker": " Sacha Greif",
+		"img": "greif"
 	},
 	{
 		"type": "talk",
@@ -31,7 +32,8 @@
 		"end": "10:40",
 		"title": " 5 architectures of asynchronous JavaScript",
 		"duration": "30",
-		"speaker": " Tomasz Ducin "
+		"speaker": " Tomasz Ducin",
+		"img": "ducin"
 	},
 	{
 		"type": "misc",
@@ -48,7 +50,8 @@
 		"end": "11:55",
 		"title": "Best Practices for GraphQL and GraphQL Subscriptions at Scale",
 		"duration": "30",
-		"speaker": " Laney Kuenzel Zamore & Adam Kramer "
+		"speaker": " Laney Kuenzel Zamore & Adam Kramer",
+		"img": "kramer"
 	},
 	{
 		"type": "talk",
@@ -57,7 +60,8 @@
 		"end": "12:10",
 		"title": "Sociolinguistics and the Javascript community: a love story",
 		"duration": "15",
-		"speaker": " Harriet Lawrence "
+		"speaker": " Harriet Lawrence",
+		"img": "lawrence"
 	},
 	{
 		"type": "lightning",
@@ -96,7 +100,8 @@
 		"end": "14:00",
 		"title": "You're only supposed to blow the bloody doors off!",
 		"duration": "30",
-		"speaker": " Léonie Watson"
+		"speaker": " Léonie Watson",
+		"img": "watson"
 	},
 	{
 		"type": "talk",
@@ -105,7 +110,8 @@
 		"end": "14:30",
 		"title": "A Brief History of Prototypes",
 		"duration": "30",
-		"speaker": " Katerina Marchán"
+		"speaker": " Katerina Marchán",
+		"img": "marchan"
 	},
 	{
 		"type": "misc",
@@ -122,7 +128,8 @@
 		"end": "15:30",
 		"title": "Best Practices for reusable UI components",
 		"duration": "30",
-		"speaker": " Mars Jullian"
+		"speaker": " Mars Jullian",
+		"img": "jullian"
 	},
 	{
 		"type": "talk",
@@ -131,7 +138,8 @@
 		"end": "16:00",
 		"title": "The Design and Evolution of Event-Driven Databases",
 		"duration": "30",
-		"speaker": " Mark Nadal"
+		"speaker": " Mark Nadal",
+		"img": "nadal"
 	},
 	{
 		"type": "lightning",
@@ -140,7 +148,8 @@
 		"end": "16:05",
 		"title": "Lightning talk: Writing cross-platform editor plugins",
 		"duration": "5",
-		"speaker": "Henric Trotzig"
+		"speaker": "Henric Trotzig",
+		"img": "trotzig"
 	},
 	{
 		"type": "lightning",
@@ -149,7 +158,8 @@
 		"end": "16:10",
 		"title": "Lightning talk: Payment Request API in a React high order component",
 		"duration": "5",
-		"speaker": "Marco Lanaro"
+		"speaker": "Marco Lanaro",
+		"img": "lanaro"
 	},
 	{
 		"type": "misc",
@@ -166,7 +176,8 @@
 		"end": "17:10",
 		"title": "Solving layout problems with CSS Grid and friends",
 		"duration": "30",
-		"speaker": " Rachel Andrew"
+		"speaker": " Rachel Andrew",
+		"img": "andrew"
 	},
 	{
 		"type": "talk",
@@ -175,7 +186,8 @@
 		"end": "17:40",
 		"title": "Keynote: The hilarious misadventures of being a platform downstream from your language",
 		"duration": "30",
-		"speaker": " Myles Borins"
+		"speaker": " Myles Borins",
+		"img": "borins"
 	},
 	{
 		"type": "misc",
@@ -201,7 +213,8 @@
 		"end": "19:30",
 		"title": "VulcanJS workshop (60 seats)",
 		"duration": "60",
-		"speaker": "Sacha Greif - read more and sign up"
+		"speaker": "Sacha Greif - read more and sign up",
+		"img": "greif"
 	},
 	{
 		"type": "misc",
@@ -243,7 +256,8 @@
 		"end": "10:20",
 		"title": "Keynote: The future of the web and the curious case of the unintended silo",
 		"duration": "50",
-		"speaker": " Paul Kinlan"
+		"speaker": " Paul Kinlan",
+		"img": "kinlan"
 	},
 	{
 		"type": "talk",
@@ -252,7 +266,8 @@
 		"end": "10:35",
 		"title": "Who Cares Why Undefined Is Not a Function",
 		"duration": "15",
-		"speaker": " Tereza Sokol"
+		"speaker": " Tereza Sokol",
+		"img": "sokol"
 	},
 	{
 		"type": "misc",
@@ -269,7 +284,8 @@
 		"end": "11:35",
 		"title": "Fun With Serverless Javascript",
 		"duration": "30",
-		"speaker": " Lorna Mitchell"
+		"speaker": " Lorna Mitchell",
+		"img": "mitchell"
 	},
 	{
 		"type": "talk",
@@ -278,7 +294,8 @@
 		"end": "11:50",
 		"title": "Down the Rabbit Hole: JS in Wonderland",
 		"duration": "15",
-		"speaker": " Claudia Hernández"
+		"speaker": " Claudia Hernández",
+		"img": "hernandez"
 	},
 	{
 		"type": "lightning",
@@ -313,7 +330,8 @@
 		"end": "13:50",
 		"title": "P2P",
 		"duration": "30",
-		"speaker": " Feross Aboukhadijeh"
+		"speaker": " Feross Aboukhadijeh",
+		"img": "feross"
 	},
 	{
 		"type": "talk",
@@ -322,7 +340,8 @@
 		"end": "14:20",
 		"title": "Beyond the bubble",
 		"duration": "30",
-		"speaker": " Ben Schwarz"
+		"speaker": " Ben Schwarz",
+		"img": "schwarz"
 	},
 	{
 		"type": "misc",
@@ -339,7 +358,8 @@
 		"end": "15:20",
 		"title": "Reactive Web Animations with RxJS",
 		"duration": "30",
-		"speaker": " David Khourshid"
+		"speaker": " David Khourshid",
+		"img": "khourshid"
 	},
 	{
 		"type": "lightning",
@@ -374,7 +394,8 @@
 		"end": "16:40",
 		"title": "TBA.js",
 		"duration": "30",
-		"speaker": " Guillermo Rauch"
+		"speaker": " Guillermo Rauch",
+		"img": "rauch"
 	},
 	{
 		"type": "talk",
@@ -383,7 +404,8 @@
 		"end": "17:10",
 		"title": "Keynote: Building Inclusive Communities",
 		"duration": "30",
-		"speaker": " Karolina Szczur"
+		"speaker": " Karolina Szczur",
+		"img": "szczur"
 	},
 	{
 		"type": "misc",
