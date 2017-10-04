@@ -1,3 +1,4 @@
+const scrollBox = document.querySelector('.scroll-box');
 const eventContainer = document.querySelector('.event-container');
 const carousel = document.querySelector('.carousel');
 
@@ -57,32 +58,32 @@ function excerpt(title) {
 }
 
 function render(day) {
-	eventContainer.innerHTML = '';
+	scrollBox.innerHTML = '';
 	events.filter(event => event.day === day).forEach(event => {
-		eventContainer.innerHTML += `
-			<div class="scroll-box">
-				<main class="event-container">
-					<div class="speaker-container"> 
-						<div class="speaker-container__portrait">
-							<img class="speaker-container__img" src="assets/images/${event.img}.png" />		
-						</div>
-						<div class="speaker-container__text">
-							<div>
-								<p class="speaker-container__name">${event.speaker}</p>
-								<p class="speaker-container__description">
-									Creator of Sidebar, The State of JavaScript & more
-								</p>
-							</div>
+		scrollBox.innerHTML += `
+			<main class="event-container">
+				<div class="speaker-container"> 
+					<div class="speaker-container__portrait">
+						<img class="speaker-container__img" src="assets/images/greif.png" />		
+					</div>
+					<div class="speaker-container__text">
+						<div>
+							<p class="speaker-container__name">Sascha Greif</p>
+							<p class="speaker-container__description">
+								Creator of Sidebar, The State of JavaScript & more
+							</p>
 						</div>
 					</div>
-					<h1>${event.title}</h1>
-					<p class="event-container__paragraph">
-						${event.text}
-					</p>
-				</main>
-			</div>
-		`;
-	}
+				</div>
+				<h1>Keynote: The State Of JavaScript</h1>
+				<p class="event-container__paragraph">
+					Sacha is a designer, developer, and entrepreneur. After suffering through many years (ok, just three) of computer science classes, he decided his true calling was design and parlayed a love of textfields and checkboxes into a mildly successful career as a freelance UI designer. Lately though, he's been thinking this coding thing might have some legs after all, and spends his time on various open-source projects such as Vulcan. He's also the creator of Sidebar, a daily newsletter of design links.
+					Sacha is a designer, developer, and entrepreneur. After suffering through many years (ok, just three) of computer science classes, he decided his true calling was design and parlayed a love of textfields and checkboxes into a mildly successful career as a freelance UI designer. Lately though, he's been thinking this coding thing might have some legs after all, and spends his time on various open-source projects such as Vulcan. He's also the creator of Sidebar, a daily newsletter of design links.
+					Sacha is a designer, developer, and entrepreneur. After suffering through many years (ok, just three) of computer science classes, he decided his true calling was design and parlayed a love of textfields and checkboxes into a mildly successful career as a freelance UI designer. Lately though, he's been thinking this coding thing might have some legs after all, and spends his time on various open-source projects such as Vulcan. He's also the creator of Sidebar, a daily newsletter of design links.
+				</p>
+			</main>
+		`
+	});
 	carousel.innerHTML = '';
 	events.filter(event => event.day === day).forEach(event => {
 		carousel.innerHTML += `
