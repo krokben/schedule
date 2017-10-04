@@ -73,21 +73,21 @@ function render(day) {
 						<div class="event__line"></div>
 						<div class="event__end">${event.end}</div>
 					</div>
-					<div class="event__text event__text--pink ${calcSize(event.duration) === 'event--xl' ? 'event__text--top' : null}">
+					<div class="event__text event__text--pink ${hasBeen(event) === 'event--past' ? 'event__header--grey' : ''} ${calcSize(event.duration) === 'event--xl' ? 'event__text--top' : null}">
 						<h3 class="event__header">${excerpt(event.title)}</h3>
 					</div>
 				</div>
 			`;
 		} else if (event.type === 'talk') {
 			eventContainer.innerHTML += `
-				<div class="event ${calcSize(event.duration)} ${hasBeen(event)}">
+				<div class="event ${calcSize(event.duration)} ${hasBeen(event)} ${event.img ? `event--${event.img}` : null}">
 					<div class="event__time">
 						<div class="event__start">${event.start}</div>
 						<div class="event__line"></div>
 						<div class="event__end">${event.end}</div>
 					</div>
 					<div class="event__text">
-						<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
+						<h3 class="event__header ${hasBeen(event) === 'event--past' ? 'event__header--grey' : 'event__header--blue'}">${excerpt(event.title)}</h3>
 						<p class="event__speaker">${event.speaker}</p>
 					</div>
 				</div>
@@ -101,9 +101,9 @@ function render(day) {
 						<div class="event__end">${event.end}</div>
 					</div>
 					<div class="event__text">
-						<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
+						<h3 class="event__header ${hasBeen(event) === 'event--past' ? 'event__header--grey' : 'event__header--blue'}">${excerpt(event.title)}</h3>
 						<p class="event__speaker">
-							${event.speaker}${event.link ? `- <a class="event__link" target="_blank" href="${event.link}">${event.handle}</a>` : ''}
+							${event.speaker}${event.link ? `- <a class="event__link ${hasBeen(event) === 'event--past' ? 'event__link--grey' : ''}" target="_blank" href="${event.link}">${event.handle}</a>` : ''}
 						</p>
 					</div>
 				</div>

@@ -14,11 +14,6 @@ h1 {
 	text-align: center;
 }
 
-a {
-	color: #FF2DF1;
-	text-decoration: none;
-}
-
 .trigram {
 	float: right;
 	color: #243EFF;
@@ -61,21 +56,6 @@ a {
 	position: relative;
 	font-size: 13px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.event:before {
-	background-image: url(assets/images/portrait.png);
-	background-size: 45%;
-	background-repeat: no-repeat;
-	background-position: right;
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0.2;
 }
 
 .event-misc {
@@ -150,6 +130,20 @@ a {
 	text-align: center;
 }
 
+.event__link {
+	color: #FF2DF1;
+	text-decoration: none;
+}
+
+.event__link--grey {
+	color: #4A4A4A;
+}
+
+.event__link--grey:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
 .event__header {
 	font-size: 13px;
 	font-weight: 600;
@@ -158,6 +152,10 @@ a {
 
 .event__header--blue {
 	color: #243EFF;
+}
+
+.event__header--grey {
+	color: #4A4A4A;
 }
 
 .event__text--top {
@@ -169,4 +167,289 @@ a {
 	font-weight: 300;
 	margin: 0;
 	color: #333;
+}
+
+.event--greif:before {
+	background-image: url(assets/images/greif.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--ducin:before {
+	background-image: url(assets/images/ducin.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--kramer:before {
+	background-image: url(assets/images/kramer.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--lawrence:before {
+	background-image: url(assets/images/lawrence.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--watson:before {
+	background-image: url(assets/images/watson.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--marchan:before {
+	background-image: url(assets/images/marchan.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--jullian:before {
+	background-image: url(assets/images/jullian.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--nadal:before {
+	background-image: url(assets/images/nadal.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--andrew:before {
+	background-image: url(assets/images/andrew.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--borins:before {
+	background-image: url(assets/images/borins.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--kinlan:before {
+	background-image: url(assets/images/kinlan.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--sokol:before {
+	background-image: url(assets/images/sokol.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--mitchell:before {
+	background-image: url(assets/images/mitchell.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--hernandez:before {
+	background-image: url(assets/images/hernandez.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--feross:before {
+	background-image: url(assets/images/feross.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--schwarz:before {
+	background-image: url(assets/images/schwarz.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--khourshid:before {
+	background-image: url(assets/images/khourshid.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--rauch:before {
+	background-image: url(assets/images/rauch.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.event--szczur:before {
+	background-image: url(assets/images/szczur.png);
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: right;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
 }

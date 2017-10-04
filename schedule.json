@@ -23,8 +23,8 @@
 		"title": "Keynote: The State Of JavaScript",
 		"duration": "30",
 		"speaker": "Sacha Greif",
-		"slug": "the-state-of-javascript"
-	},
+		"slug": "the-state-of-javascript",
+		"img": "greif"	},
 	{
 		"type": "talk",
 		"day": "7",
@@ -33,7 +33,8 @@
 		"title": " 5 architectures of asynchronous JavaScript",
 		"duration": "30",
 		"speaker": " Tomasz Ducin",
-		"slug": "5-architectures-of-asynchronous-javascript"
+		"slug": "5-architectures-of-asynchronous-javascript",
+		"img": "ducin"
 	},
 	{
 		"type": "misc",
@@ -51,7 +52,8 @@
 		"title": "Best Practices for GraphQL and GraphQL Subscriptions at Scale",
 		"duration": "30",
 		"speaker": "Laney Kuenzel Zamore & Adam Kramer",
-		"slug": "best-practices-for-graphql-subscriptions-at-scale"
+		"slug": "best-practices-for-graphql-subscriptions-at-scale",
+		"img": "kramer"
 	},
 	{
 		"type": "talk",
@@ -61,7 +63,8 @@
 		"title": "Sociolinguistics and the Javascript community: a love story",
 		"duration": "15",
 		"speaker": "Harriet Lawrence",
-		"slug": "sociolinguistics-and-the-javascript-community-a-love-story"
+		"slug": "sociolinguistics-and-the-javascript-community-a-love-story",
+		"img": "lawrence"
 	},
 	{
 		"type": "lightning",
@@ -103,7 +106,8 @@
 		"title": "You're only supposed to blow the bloody doors off!",
 		"duration": "30",
 		"speaker": "Léonie Watson",
-		"slug": "you-are-only-supposed-to-blow-the-bloddy-doors-off"
+		"slug": "you-are-only-supposed-to-blow-the-bloddy-doors-off",
+		"img": "watson"
 	},
 	{
 		"type": "talk",
@@ -113,7 +117,8 @@
 		"title": "A Brief History of Prototypes",
 		"duration": "30",
 		"speaker": "Katerina Marchán",
-		"slug": "a-brief-history-of-prototypes"
+		"slug": "a-brief-history-of-prototypes",
+		"img": "marchan"
 	},
 	{
 		"type": "misc",
@@ -131,7 +136,8 @@
 		"title": "Best Practices for reusable UI components",
 		"duration": "30",
 		"speaker": "Mars Jullian",
-		"slug": "best-practices-for-reusable-ui-components"
+		"slug": "best-practices-for-reusable-ui-components",
+		"img": "jullian"
 	},
 	{
 		"type": "talk",
@@ -141,7 +147,8 @@
 		"title": "The Design and Evolution of Event-Driven Databases",
 		"duration": "30",
 		"speaker": "Mark Nadal",
-		"slug": "the-design-and-evolution-of-event-driven-databases"
+		"slug": "the-design-and-evolution-of-event-driven-databases",
+		"img": "nadal"
 	},
 	{
 		"type": "lightning",
@@ -151,7 +158,8 @@
 		"title": "Lightning talk: Writing cross-platform editor plugins",
 		"duration": "5",
 		"speaker": "Henric Trotzig",
-		"slug": "writing-cross-platform-editor-plugins"
+		"slug": "writing-cross-platform-editor-plugins",
+		"img": "trotzig"
 	},
 	{
 		"type": "lightning",
@@ -161,7 +169,8 @@
 		"title": "Lightning talk: Payment Request API in a React high order component",
 		"duration": "5",
 		"speaker": "Marco Lanaro",
-		"slug": "payment-request-api-in-a-react-high-order-component"
+		"slug": "payment-request-api-in-a-react-high-order-component",
+		"img": "lanaro"
 	},
 	{
 		"type": "misc",
@@ -179,7 +188,8 @@
 		"title": "Solving layout problems with CSS Grid and friends",
 		"duration": "30",
 		"speaker": "Rachel Andrew",
-		"slug": "solving-layout-problems-with-css-grid-and-friends"
+		"slug": "solving-layout-problems-with-css-grid-and-friends",
+		"img": "andrew"
 	},
 	{
 		"type": "talk",
@@ -189,7 +199,8 @@
 		"title": "Keynote: The hilarious misadventures of being a platform downstream from your language",
 		"duration": "30",
 		"speaker": "Myles Borins",
-		"slug": "the-hilarious-misadventures-of-being-a-platform-downstream-from-your-language"
+		"slug": "the-hilarious-misadventures-of-being-a-platform-downstream-from-your-language",
+		"img": "borins"
 	},
 	{
 		"type": "misc",
@@ -217,7 +228,8 @@
 		"title": "VulcanJS workshop (60 seats)",
 		"duration": "60",
 		"speaker": "Sacha Greif - read more and sign up",
-		"slug": "vulcanjs-workshop-60-seats"
+		"slug": "vulcanjs-workshop-60-seats",
+		"img": "greif"
 	},
 	{
 		"type": "misc",
@@ -261,7 +273,8 @@
 		"title": "Keynote: The future of the web and the curious case of the unintended silo",
 		"duration": "50",
 		"speaker": "Paul Kinlan",
-		"slug": "the-future-of-the-web-and-the-curious-case-of-the-unintended-silo"
+		"slug": "the-future-of-the-web-and-the-curious-case-of-the-unintended-silo",
+		"img": "kinlan"
 	},
 	{
 		"type": "talk",
@@ -271,7 +284,8 @@
 		"title": "Who Cares Why Undefined Is Not a Function",
 		"duration": "15",
 		"speaker": "Tereza Sokol",
-		"slug": "who-cares-why-undefined-is-not-a-function"
+		"slug": "who-cares-why-undefined-is-not-a-function",
+		"img": "sokol"
 	},
 	{
 		"type": "misc",
@@ -289,7 +303,8 @@
 		"title": "Fun With Serverless Javascript",
 		"duration": "30",
 		"speaker": "Lorna Mitchell",
-		"slug": "fun-with-serverless-javascript"
+		"slug": "fun-with-serverless-javascript",
+		"img": "mitchell"
 	},
 	{
 		"type": "talk",
@@ -299,7 +314,8 @@
 		"title": "Down the Rabbit Hole: JS in Wonderland",
 		"duration": "15",
 		"speaker": "Claudia Hernández",
-		"slug": "down-the-rabbit-hole-js-in-wonderland"
+		"slug": "down-the-rabbit-hole-js-in-wonderland",
+		"img": "hernandez"
 	},
 	{
 		"type": "lightning",
@@ -337,7 +353,8 @@
 		"title": "P2P",
 		"duration": "30",
 		"speaker": "Feross Aboukhadijeh",
-		"slug": "p2p"
+		"slug": "p2p",
+		"img": "feross"
 	},
 	{
 		"type": "talk",
@@ -347,7 +364,8 @@
 		"title": "Beyond the bubble",
 		"duration": "30",
 		"speaker": "Ben Schwarz",
-		"slug": "beyond-the-bubble"
+		"slug": "beyond-the-bubble",
+		"img": "schwarz"
 	},
 	{
 		"type": "misc",
@@ -365,7 +383,8 @@
 		"title": "Reactive Web Animations with RxJS",
 		"duration": "30",
 		"speaker": "David Khourshid",
-		"slug": "reactive-web-animations-with-rxjs"
+		"slug": "reactive-web-animations-with-rxjs",
+		"img": "khourshid"
 	},
 	{
 		"type": "lightning",
@@ -404,7 +423,8 @@
 		"title": "TBA.js",
 		"duration": "30",
 		"speaker": "Guillermo Rauch",
-		"slug": "tbajs"
+		"slug": "tbajs",
+		"img": "rauch"
 	},
 	{
 		"type": "talk",
@@ -414,7 +434,8 @@
 		"title": "Keynote: Building Inclusive Communities",
 		"duration": "30",
 		"speaker": "Karolina Szczur",
-		"slug": "building-inclusive-communites"
+		"slug": "building-inclusive-communites",
+		"img": "szczur"
 	},
 	{
 		"type": "misc",
