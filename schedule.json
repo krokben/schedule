@@ -5,7 +5,7 @@
 		"start": "09:00",
 		"end": "09:30",
 		"title": "Registration + Coffee",
-		"duration": "30",
+		"duration": "30"
 	},
 	{
 		"type": "misc",
@@ -24,7 +24,8 @@
 		"duration": "30",
 		"speaker": "Sacha Greif",
 		"slug": "the-state-of-javascript",
-		"img": "greif"	},
+		"img": "greif"
+	},
 	{
 		"type": "talk",
 		"day": "7",
