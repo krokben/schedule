@@ -5,7 +5,7 @@
 		"start": "09:00",
 		"end": "09:30",
 		"title": "Registration + Coffee",
-		"duration": "30"
+		"duration": "30",
 	},
 	{
 		"type": "misc",
@@ -22,7 +22,8 @@
 		"end": "10:10",
 		"title": "Keynote: The State Of JavaScript",
 		"duration": "30",
-		"speaker": " Sacha Greif "
+		"speaker": "Sacha Greif",
+		"slug": "the-state-of-javascript"
 	},
 	{
 		"type": "talk",
@@ -31,7 +32,8 @@
 		"end": "10:40",
 		"title": " 5 architectures of asynchronous JavaScript",
 		"duration": "30",
-		"speaker": " Tomasz Ducin "
+		"speaker": " Tomasz Ducin",
+		"slug": "5-architectures-of-asynchronous-javascript"
 	},
 	{
 		"type": "misc",
@@ -48,7 +50,8 @@
 		"end": "11:55",
 		"title": "Best Practices for GraphQL and GraphQL Subscriptions at Scale",
 		"duration": "30",
-		"speaker": " Laney Kuenzel Zamore & Adam Kramer "
+		"speaker": "Laney Kuenzel Zamore & Adam Kramer",
+		"slug": "best-practices-for-graphql-subscriptions-at-scale"
 	},
 	{
 		"type": "talk",
@@ -57,7 +60,8 @@
 		"end": "12:10",
 		"title": "Sociolinguistics and the Javascript community: a love story",
 		"duration": "15",
-		"speaker": " Harriet Lawrence "
+		"speaker": "Harriet Lawrence",
+		"slug": "sociolinguistics-and-the-javascript-community-a-love-story"
 	},
 	{
 		"type": "lightning",
@@ -68,7 +72,8 @@
 		"duration": "5",
 		"speaker": "Pontus Lundin",
 		"link": "https://twitter.com/pontahontas",
-		"handle": "@pontahontas"
+		"handle": "@pontahontas",
+		"slug": "service-workers-use-them"
 	},
 	{
 		"type": "lightning",
@@ -79,7 +84,8 @@
 		"duration": "5",
 		"speaker": "Johan Öbrink",
 		"link": "https://twitter.com/johanobrink",
-		"handle": "@johanobrink"
+		"handle": "@johanobrink",
+		"slug": "from-citizen-initiative-to-governmental-agency-process-and-back-again"
 	},
 	{
 		"type": "misc",
@@ -96,7 +102,8 @@
 		"end": "14:00",
 		"title": "You're only supposed to blow the bloody doors off!",
 		"duration": "30",
-		"speaker": " Léonie Watson"
+		"speaker": "Léonie Watson",
+		"slug": "you-are-only-supposed-to-blow-the-bloddy-doors-off"
 	},
 	{
 		"type": "talk",
@@ -105,7 +112,8 @@
 		"end": "14:30",
 		"title": "A Brief History of Prototypes",
 		"duration": "30",
-		"speaker": " Katerina Marchán"
+		"speaker": "Katerina Marchán",
+		"slug": "a-brief-history-of-prototypes"
 	},
 	{
 		"type": "misc",
@@ -122,7 +130,8 @@
 		"end": "15:30",
 		"title": "Best Practices for reusable UI components",
 		"duration": "30",
-		"speaker": " Mars Jullian"
+		"speaker": "Mars Jullian",
+		"slug": "best-practices-for-reusable-ui-components"
 	},
 	{
 		"type": "talk",
@@ -131,7 +140,8 @@
 		"end": "16:00",
 		"title": "The Design and Evolution of Event-Driven Databases",
 		"duration": "30",
-		"speaker": " Mark Nadal"
+		"speaker": "Mark Nadal",
+		"slug": "the-design-and-evolution-of-event-driven-databases"
 	},
 	{
 		"type": "lightning",
@@ -140,7 +150,8 @@
 		"end": "16:05",
 		"title": "Lightning talk: Writing cross-platform editor plugins",
 		"duration": "5",
-		"speaker": "Henric Trotzig"
+		"speaker": "Henric Trotzig",
+		"slug": "writing-cross-platform-editor-plugins"
 	},
 	{
 		"type": "lightning",
@@ -149,7 +160,8 @@
 		"end": "16:10",
 		"title": "Lightning talk: Payment Request API in a React high order component",
 		"duration": "5",
-		"speaker": "Marco Lanaro"
+		"speaker": "Marco Lanaro",
+		"slug": "payment-request-api-in-a-react-high-order-component"
 	},
 	{
 		"type": "misc",
@@ -166,7 +178,8 @@
 		"end": "17:10",
 		"title": "Solving layout problems with CSS Grid and friends",
 		"duration": "30",
-		"speaker": " Rachel Andrew"
+		"speaker": "Rachel Andrew",
+		"slug": "solving-layout-problems-with-css-grid-and-friends"
 	},
 	{
 		"type": "talk",
@@ -175,7 +188,8 @@
 		"end": "17:40",
 		"title": "Keynote: The hilarious misadventures of being a platform downstream from your language",
 		"duration": "30",
-		"speaker": " Myles Borins"
+		"speaker": "Myles Borins",
+		"slug": "the-hilarious-misadventures-of-being-a-platform-downstream-from-your-language"
 	},
 	{
 		"type": "misc",
@@ -192,7 +206,8 @@
 		"end": "22:00",
 		"title": "Techno Ping Pong",
 		"duration": "250",
-		"speaker": "There will be beer, food, techno, ping and pong all evening!"
+		"speaker": "There will be beer, food, techno, ping and pong all evening!",
+		"slug": "techno-ping-pong"
 	},
 	{
 		"type": "overlap",
@@ -201,7 +216,8 @@
 		"end": "19:30",
 		"title": "VulcanJS workshop (60 seats)",
 		"duration": "60",
-		"speaker": "Sacha Greif - read more and sign up"
+		"speaker": "Sacha Greif - read more and sign up",
+		"slug": "vulcanjs-workshop-60-seats"
 	},
 	{
 		"type": "misc",
@@ -218,7 +234,8 @@
 		"end": "09:00",
 		"title": "Equality Pep-talk Breakfast (60 seats)",
 		"duration": "60",
-		"speaker": "Read more and sign up"
+		"speaker": "Read more and sign up",
+		"slug": "equality-pep-talk-breakfast"
 	},
 	{
 		"type": "misc",
@@ -243,7 +260,8 @@
 		"end": "10:20",
 		"title": "Keynote: The future of the web and the curious case of the unintended silo",
 		"duration": "50",
-		"speaker": " Paul Kinlan"
+		"speaker": "Paul Kinlan",
+		"slug": "the-future-of-the-web-and-the-curious-case-of-the-unintended-silo"
 	},
 	{
 		"type": "talk",
@@ -252,7 +270,8 @@
 		"end": "10:35",
 		"title": "Who Cares Why Undefined Is Not a Function",
 		"duration": "15",
-		"speaker": " Tereza Sokol"
+		"speaker": "Tereza Sokol",
+		"slug": "who-cares-why-undefined-is-not-a-function"
 	},
 	{
 		"type": "misc",
@@ -269,7 +288,8 @@
 		"end": "11:35",
 		"title": "Fun With Serverless Javascript",
 		"duration": "30",
-		"speaker": " Lorna Mitchell"
+		"speaker": "Lorna Mitchell",
+		"slug": "fun-with-serverless-javascript"
 	},
 	{
 		"type": "talk",
@@ -278,7 +298,8 @@
 		"end": "11:50",
 		"title": "Down the Rabbit Hole: JS in Wonderland",
 		"duration": "15",
-		"speaker": " Claudia Hernández"
+		"speaker": "Claudia Hernández",
+		"slug": "down-the-rabbit-hole-js-in-wonderland"
 	},
 	{
 		"type": "lightning",
@@ -287,7 +308,8 @@
 		"end": "11:55",
 		"title": "Lightning talk: Renderless React Components",
 		"duration": "5",
-		"speaker": "Findlay Hannam"
+		"speaker": "Findlay Hannam",
+		"slug": "renderless-react-components"
 	},
 	{
 		"type": "lightning",
@@ -296,7 +318,8 @@
 		"end": "12:00",
 		"title": "Lightning talk: Machine Learning Intuitions for DeepLearn.js",
 		"duration": "5",
-		"speaker": "Amir Hossein Rahnama"
+		"speaker": "Amir Hossein Rahnama",
+		"slug": "machine-learning-intuitions-for-deeplearnjs"
 	},
 	{
 		"type": "misc",
@@ -313,7 +336,8 @@
 		"end": "13:50",
 		"title": "P2P",
 		"duration": "30",
-		"speaker": " Feross Aboukhadijeh"
+		"speaker": "Feross Aboukhadijeh",
+		"slug": "p2p"
 	},
 	{
 		"type": "talk",
@@ -322,7 +346,8 @@
 		"end": "14:20",
 		"title": "Beyond the bubble",
 		"duration": "30",
-		"speaker": " Ben Schwarz"
+		"speaker": "Ben Schwarz",
+		"slug": "beyond-the-bubble"
 	},
 	{
 		"type": "misc",
@@ -339,7 +364,8 @@
 		"end": "15:20",
 		"title": "Reactive Web Animations with RxJS",
 		"duration": "30",
-		"speaker": " David Khourshid"
+		"speaker": "David Khourshid",
+		"slug": "reactive-web-animations-with-rxjs"
 	},
 	{
 		"type": "lightning",
@@ -348,7 +374,8 @@
 		"end": "15:25",
 		"title": "Lightning talk: BikeShed - JavaScript in and on tvOS",
 		"duration": "5",
-		"speaker": "Joel Arvidsson"
+		"speaker": "Joel Arvidsson",
+		"slug": "bikeshed-javascript-in-and-on-tvos"
 	},
 	{
 		"type": "lightning",
@@ -357,7 +384,9 @@
 		"end": "15:30",
 		"title": "Lightning talk: Use any Npm module as a distributed scalable microservice, as easy as NodeJS' \"require\"",
 		"duration": "5",
-		"speaker": "Joakim Carlstein"
+		"speaker": "Joakim Carlstein",
+		"slug": "use-any-npm-module-as-a-distributed-scalable-microservice"
+
 	},
 	{
 		"type": "misc",
@@ -374,7 +403,8 @@
 		"end": "16:40",
 		"title": "TBA.js",
 		"duration": "30",
-		"speaker": " Guillermo Rauch"
+		"speaker": "Guillermo Rauch",
+		"slug": "tbajs"
 	},
 	{
 		"type": "talk",
@@ -383,7 +413,8 @@
 		"end": "17:10",
 		"title": "Keynote: Building Inclusive Communities",
 		"duration": "30",
-		"speaker": " Karolina Szczur"
+		"speaker": "Karolina Szczur",
+		"slug": "building-inclusive-communites"
 	},
 	{
 		"type": "misc",
@@ -409,6 +440,7 @@
 		"end": "20:00",
 		"title": "Code in the Dark!",
 		"duration": "120",
-		"speaker": " Read more and sign up"
+		"speaker": "Read more and sign up",
+		"slug": "code-in-the-dark"
 	}
 ]
