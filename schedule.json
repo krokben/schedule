@@ -23,7 +23,8 @@
 		"title": "Keynote: The State Of JavaScript",
 		"duration": "30",
 		"speaker": " Sacha Greif",
-		"img": "greif"
+		"img": "greif",
+		"slug": "the-state-of-javascript"
 	},
 	{
 		"type": "talk",
