@@ -1,0 +1,171 @@
+body, html {
+	overflow: hidden;
+}
+
+body {
+	width: 100vw;
+	margin: 0;
+	font-size: 16px;
+	font-family: Source Sans Pro;
+}
+
+h1 {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #FF2DF1;
+	font-weight: 200;
+}
+
+.scroll-box {
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.event-container {
+	margin-top: 60px;
+	margin-bottom: 132px;
+}
+
+.event-container__paragraph {
+	text-align: justify;
+}
+
+.speaker-container {
+	display: flex;
+}
+
+.speaker-container__portrait {
+	display: flex;
+	flex: 1;
+	align-self: center;
+}
+
+.speaker-container__img {
+	align-self: center;
+	width: 100%;
+}
+
+.speaker-container__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 2;
+	padding-left: 8px;
+}
+
+.speaker-container__name {
+	color: #243EFF;
+	margin: 0;
+}
+
+.speaker-container__description {
+	text-transform: uppercase;
+	font-size: 9px;
+	font-weight: 600;
+	margin: 0;
+}
+
+header {
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
+	padding: 20px;
+	background-color: #fff;
+	z-index: 9999999;
+}
+
+.trigram {
+	float: right;
+	color: #243EFF;
+}
+
+.carousel {
+	display: flex;
+	box-sizing: border-box;
+	background-color: #fff;
+	height: 132px;
+	padding: 15px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-x: scroll;
+	box-shadow: 0 -10px 30px rgba(255,255,255,1);
+}
+
+.carousel__item {
+	background-color: #fff;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	min-width: 100px;
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	font-size: 11px;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.carousel__item--zoom {
+	animation-name: zoom-container;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	z-index: 1;
+}
+
+.carousel__item--zoom-reverse {
+	animation-name: zoom-container;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-direction: reverse;
+}
+
+.carousel__time {
+	font-size: 1em;
+}
+
+.carousel__duration {
+	font-size: 1em;
+}
+
+.carousel__title {
+	font-size: 0.9em;
+	margin: 0;
+}
+
+.carousel__title--blue {
+	color: #243EFF;
+}
+
+.carousel__speaker {
+	font-size: 9px;
+	font-style: italic;
+	margin: 0;
+}
+
+@keyframes zoom-container {
+	from {
+		min-width: 100px;
+		width: 100px;
+		height: 100px;
+		font-size: 11px;
+		margin: 0;
+	}
+	to {
+		min-width: 120px;
+		width: 120px;
+		height: 120px;
+		font-size: 13px;
+		margin: -10px;
+	}
+}
