@@ -1,7 +1,6 @@
 const eventContainer = document.querySelector('.event-container');
 const day1 = document.querySelector('#day1');
 const day2 = document.querySelector('#day2');
-
 // Global Variables
 let events = [];
 const now = new Date();

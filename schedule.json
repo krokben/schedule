@@ -24,18 +24,22 @@
 		"duration": "30",
 		"speaker": "Sacha Greif",
 		"slug": "the-state-of-javascript",
-		"img": "greif"
+		"img": "greif",
+		"text": "Sacha is a designer, developer, and entrepreneur. After suffering through many years (ok, just three) of computer science classes, he decided his true calling was design and parlayed a love of textfields and checkboxes into a mildly successful career as a freelance UI designer. Lately though, he's been thinking this coding thing might have some legs after all, and spends his time on various open-source projects such as Vulcan. He's also the creator of Sidebar, a daily newsletter of design links."
 	},
 	{
 		"type": "talk",
 		"day": "7",
 		"start": "10:10",
 		"end": "10:40",
-		"title": " 5 architectures of asynchronous JavaScript",
+		"title": "5 architectures of asynchronous JavaScript",
 		"duration": "30",
-		"speaker": " Tomasz Ducin",
+		"speaker": "Tomasz Ducin",
 		"slug": "5-architectures-of-asynchronous-javascript",
-		"img": "ducin"
+		"img": "ducin",
+		"text": "In this talk we'll discuss 5 alternative approaches to handle async operations: callbacks, events, promises, coroutines and reactive streams. None of them is either legacy or a silver bullet - a good dev needs to pick the right tool for the job. However, in order to understand them, we must step back to fundamentals all these rely on: the mechanics of event loop and run to completion rule, as well as learn to distinguish between sync and async flow. Then we proceed to design patterns built on top of each of the 5 approaches, discussing their strengths and limitations. Funfacts, such as famous Promise.race() included!",
+
+		"speaker-info": "Tomasz is an advocate of modern JavaScript solutions. Experienced in both frontend and backend. Passionate about solving technical and organisational issues. Co-creator of JSON-Schema Faker project."
 	},
 	{
 		"type": "misc",
@@ -54,7 +58,10 @@
 		"duration": "30",
 		"speaker": "Laney Kuenzel Zamore & Adam Kramer",
 		"slug": "best-practices-for-graphql-subscriptions-at-scale",
-		"img": "kramer"
+		"img": "kramer",
+		"text": "GraphQL is a query language for APIs and a runtime for fulfilling those queries. Using GraphQL, a client can declaratively describe the data that it needs, and the GraphQL server will return exactly that data in a predictable shape. GraphQL Subscriptions, recently added to the open-source GraphQL spec, provides a way for clients to subscribe to real-time updates. Facebook has been using GraphQL in production for over five years and GraphQL Subscriptions in production for over two years. In this talk, we will start with an introduction to GraphQL and GraphQL Subscriptions. We will then discuss various lessons that our team has learned from operating these systems in production at Facebook. We’ll share some best practices for building out a GraphQL schema in a scalable way, implementing GraphQL Subscriptions, and designing GraphQL servers and clients for your application.",
+
+		"speaker-info": "Laney Kuenzel Zamore is a software engineer on the GraphQL team at Facebook Boston. Born and raised in Cleveland, Ohio, she studied math and computer science at Stanford University and then started at Facebook, where she’s worked for the last five years. For the past couple years, Laney has focused on GraphQL Subscriptions, which gives product developers an easy way to add real-time updates to an application. In her spare time, Laney enjoys running, baking, hiking, and traveling. Adam Kramer has been a software engineer at Facebook since 2008, working on the largest GraphQL server in the world for the last a year and a half. In addition to an engineering career, he holds a Ph.D. in Psychology and is interested in developing highly usable engineering systems to make software engineering more accessible to human beings. His three top hobbies include refereeing roller derby, karaoke, and explaining jokes."
 	},
 	{
 		"type": "talk",
@@ -65,7 +72,10 @@
 		"duration": "15",
 		"speaker": "Harriet Lawrence",
 		"slug": "sociolinguistics-and-the-javascript-community-a-love-story",
-		"img": "lawrence"
+		"img": "lawrence",
+		"text": "Did you know that how we learn JavaScript has changed a huge amount over the last ten years? Lots of small changes in how we introduce people to JS have built up over time into a radical difference - these changes are based in sociolinguistics! Our community’s communication has evolved rapidly. We’ve moved from only valuing the opinions of senior developers to recognising the importance of contributions from people at all stages of learning. Learning itself has become a form of participating. These are examples of the sociolinguistic concepts of legitimation and positive welcoming. My talk will introduce the basics of sociolinguistics, how we are already using them, and how we can integrate them more effectively to start building a more inclusive and welcoming space for everyone in the JS community.",
+
+		"speaker-info": "Harriet is Buildkite’s resident linguist. When she’s not attempting to prevent harassment on the internet, you’ll find her hanging out in bouldering gyms, or with her nose in a book."
 	},
 	{
 		"type": "lightning",
@@ -108,7 +118,10 @@
 		"duration": "30",
 		"speaker": "Léonie Watson",
 		"slug": "you-are-only-supposed-to-blow-the-bloddy-doors-off",
-		"img": "watson"
+		"img": "watson",
+		"text": "What do these imortal words, from Charlie Crocker (AKA Michael Caine) in The Italian Job, have to do with JavaScript? More than you might think. It is often said that JavaScript makes things inaccessible with a screen reader. This is not true though. It is possible to do good and bad things with JavaScript (as with any other language, or even dynamite) - but it helps if you understand accessibility mechanics in the browser if you want to avoid unexpected consequences. If you have ever used JavaScript to provide keyboard shortcuts, or used the ARIA application role to enable accessible software UI interactions on the web, there is a good chance it had unintended consequences for screen reader users. Using code examples and screen reader demos, Léonie will look at accessibility mechanics in the browser, the new Accessibility Object Model (AOM) JavaScript API, and how to use JavaScript so you only blow the bloody doors off!",
+
+		"speaker-info": "Léonie Watson (AKA Tink) began using the internet in 1993, turned it into a web design career in 1997, and (despite losing her eyesight along the way) has been enjoying herself thoroughly ever since. Léonie is Communications director and Principal engineer at The Paciello Group (TPG), and also works with Government Digital Service (GDS) on the GOV.UK platform. As a member of the W3C Advisory Board, and co-chair of the W3C Web Platform WG (working on specs like HTML5), Léonie is closely involved with the web standards community. She is frequently asked to talk about web standards and/or accessibility at conferences. In her spare time Léonie blogs on tink.uk, writes for tech journals like Smashing magazine, SitePoint.com and Net magazine. She also loves cooking, dancing and drinking tequila (although not necessarily in that order)."
 	},
 	{
 		"type": "talk",
@@ -119,7 +132,10 @@
 		"duration": "30",
 		"speaker": "Katerina Marchán",
 		"slug": "a-brief-history-of-prototypes",
-		"img": "marchan"
+		"img": "marchan",
+		"text": "JavaScript is probably the most famous example of a prototype-based language. But what is prototype-based programming? Where did it all come from? What's the big deal? Why is JavaScript's version of it the way it is? Prototype-oriented programming has been around for over 30 years now. From its earliest days as a series of language extensions for various languages, to the release of Self and the compiler technology it developed that's used by Chrome and Node.js, to the rise of JavaScript and beyond -- it has been an incredibly influential take on the concept of object-orientation, and withstood the test of time against its class-based counterparts. A Brief History of Prototypes will tell the story of this programming paradigm, the decisions and mistakes, the technological breakthroughs it led, its explosive rise in popularity on the back of ECMAScript, and puts it all in context with the way we use prototype-based languages today.",
+
+		"speaker-info": "I'm a JavaScript developer with a background in various functional dynamic languages who's really into programming language theory. I'm currently a dev on the npm CLI team and one of the admins for http://wealljs.org -- I like being involved with the JS community in various ways, helping mentor folks, etc. I've also been a maintainer for a minor front-end framework in the past (CanJS) and I do random hobby projects that I put up on github."
 	},
 	{
 		"type": "misc",
@@ -138,7 +154,10 @@
 		"duration": "30",
 		"speaker": "Mars Jullian",
 		"slug": "best-practices-for-reusable-ui-components",
-		"img": "jullian"
+		"img": "jullian",
+		"text": "React is awesome but even good frameworks don’t prevent you from writing bad code. This talk will focus on some key principles for writing reusable UI components that will make them fun to use and keep your co-workers from going crazy. ReactJS has been adopted by many companies around the world and encouraged Frontend engineers to think about UI's in terms of small components, as opposed to large applications. While we as a community have started writing our UI's in terms of components, we are all still learning about the best way to write those components. What size should the components be? How much state should each component contain? This talk puts forth some best practices learned while building a reusable UI component library for an entire engineering team. And while the talk is specific to writing reusable UI components in React, the best practices and ways of thinking about components presented in this talk can be can be applied to components written in other frameworks as well.",
+
+		"speaker-info": "I have always been in love with design and the way small details can affect someone's experience when interacting with a space or an object (I blame my parents). Through biology, physics, math, and computer science classes, I also fell in love with problem-solving. I became a front end engineer to be at the intersection between design and problem-solving, and because I am passionate about intuitive UX and designs that are born out of empathy for the user. Currently, I am putting these skills to use as a Senior UI Engineer at Netflix, where we aim to empathize with users all over the world and learn from each other every day."
 	},
 	{
 		"type": "talk",
@@ -149,7 +168,10 @@
 		"duration": "30",
 		"speaker": "Mark Nadal",
 		"slug": "the-design-and-evolution-of-event-driven-databases",
-		"img": "nadal"
+		"img": "nadal",
+		"text": "Databases are hard, right? No, they are a joke compared to Elon Musk who can balance rockets the size of skyscrapers on a pinhead. These are new times, with 100B+ IoT sensors, drones, self-driving cars and 5B+ new humans watching cat videos online. All it takes to solve any problems is clear thinking, good engineering, and people like you. Let's do this, let's build a database!",
+
+		"speaker-info": "Mark is a mathematician turned programmer. He runs a VC backed Open Source company and has traveled to over 27 countries. The diverse cultures he has experienced fuels his passion for learning, sharing, and creating open technology freely for all."
 	},
 	{
 		"type": "lightning",
@@ -190,7 +212,9 @@
 		"duration": "30",
 		"speaker": "Rachel Andrew",
 		"slug": "solving-layout-problems-with-css-grid-and-friends",
-		"img": "andrew"
+		"img": "andrew",
+		"text": "CSS Grid Layout launched into the majority of our browsers in 2017. As designers and developers have started to use Grid I’ve been answering a lot of questions about the specification. In this talk I’ll answer some of the common questions about Grid Layout in production - from dealing with old browsers to what might come next in CSS for layout. There will be plenty of practical tips for you to use in your projects today.",
+		"speaker-info": "Rachel is the Managing Director and founder of web development company edgeofmyseat.com. They were a consultancy but have shifted focus to products, currently working exclusively on our CMS Perch. Her professional skills range from front and back-end development to operations. Her day can include planning a new marketing campaign, fixing a CSS issue on a site, writing a Puppet manifest and writing a Perch app in PHP. She is an Invited Expert to the CSS Working Group, a Google Developer Expert (GDE) and was a long-time Web Standards Project member until that organisation disbanded."
 	},
 	{
 		"type": "talk",
@@ -201,7 +225,10 @@
 		"duration": "30",
 		"speaker": "Myles Borins",
 		"slug": "the-hilarious-misadventures-of-being-a-platform-downstream-from-your-language",
-		"img": "borins"
+		"img": "borins",
+		"text": "There is a group called tc39, they work on a standard called ecma262. The standard is for a language called JavaScript. This language is implemented by various vendors, generally companies who make browsers. Google has V8, Mozilla has SpiderMonkey, Microsoft has Chakra, and Apple has JSCore. So there is this platform called Node.js. It has a small core philosophy and prides itself on offering a stable ecosystem. Here is where things get weird; What happens when new language features are specified and they land in the VM you embed? What happens when the VM you embed updates their compiler? What happens when you have a community that doesn't neccessarily want things to change?",
+
+		"speaker-info": "Myles Borins is a developer, musician, artist, and maker he spends most of his time contributing to the node.js ecosystem. He graduated with a Master of Music Science and Technology from c.c.r.m.a.a.k.a the center for computer research in music and acoustics."
 	},
 	{
 		"type": "misc",
@@ -275,7 +302,10 @@
 		"duration": "50",
 		"speaker": "Paul Kinlan",
 		"slug": "the-future-of-the-web-and-the-curious-case-of-the-unintended-silo",
-		"img": "kinlan"
+		"img": "kinlan",
+		"text": "In this talk, Paul will cover the past, present and future of the web. We will dive into some of the exciting changes that have been happening on the web with Progressive Web Applications enabling you to be build fast, capable and resilient sites and apps and we will focus on how we can ensure the future health of the web by ensuring that our experiences can be connected with the sites, apps, devices and the web around us.",
+
+		"speaker-info": "Paul Kinlan leads the Web and Chrome Developer Relations team at Google. He's the creator of Web Intents - a failed IPC primitive on the web - amongst many other things. He loves to help make the web better by helping to make it easier for developers to build better things."
 	},
 	{
 		"type": "talk",
@@ -286,7 +316,10 @@
 		"duration": "15",
 		"speaker": "Tereza Sokol",
 		"slug": "who-cares-why-undefined-is-not-a-function",
-		"img": "sokol"
+		"img": "sokol",
+		"text": "We can easily list a lot of technical difference between JavaScript and Elm, but how does switching to Elm change your day to day experience? In this talk, we will walk through some common frustrations in the front-end life, how Elm can elevate some of these issues, and explore what you could spend your time on if you were never worried about undefined not being a function.",
+
+		"speaker-info": "Passionate about maintainable code and great API design. Developing educational tools at NoRedInk and open source plotting tools, all in Elm!"
 	},
 	{
 		"type": "misc",
@@ -305,7 +338,10 @@
 		"duration": "30",
 		"speaker": "Lorna Mitchell",
 		"slug": "fun-with-serverless-javascript",
-		"img": "mitchell"
+		"img": "mitchell",
+		"text": "Serverless and the noOps movement are buzzwords that you've probably heard, but could these technologies also solve problems that you actually have? This session will cover when to use a serverless approach, and answer your questions about how to get started with it. We'll look at how to write code for these platforms, and how to safely and repeatedly deploy your code to them. We'll also look at how we can use these technologies to build a skill for the Amazon Echo.",
+
+		"speaker-info": "Lorna is based in Yorkshire, UK; she is a Developer Advocate with IBM Watson Data Platform, a published author and experienced conference speaker. She brings her technical expertise on a range of topics to audiences all over the world with her writing and speaking engagements, always delivered with a very practical slant. In her spare time, Lorna blogs at http://lornajane.net."
 	},
 	{
 		"type": "talk",
@@ -316,7 +352,10 @@
 		"duration": "15",
 		"speaker": "Claudia Hernández",
 		"slug": "down-the-rabbit-hole-js-in-wonderland",
-		"img": "hernandez"
+		"img": "hernandez",
+		"text": "What even makes sense in Javascript ? For a language originally created in 10 days it surely has a lot of quirks and perks many JS developers are unaware of. Sometimes, it might even seem like we fell down the rabbit hole only to find that NaN is actually a Number, undefined can be defined, +!![] equals 1, Array.sort()may not work as you suspected and so much other nonsense that can trip any JS developer’s mind. This talk is a collection of Javascript’s oddities and unexpected behaviors that hopefully will prevent some future headaches and help understand the language that we all love in a more deeper and meaningful way.",
+
+		"speaker-info": "Claudia Hernández is a Mexican frontend developer at Dailymotion in Paris. She has previously worked on projects for companies such as Air France, EDF, Groupe SEB and Aéroport de Paris. Claudia has a computer science background and loves learning emerging web technologies. When she is not coding, chances are you’ll find her reading a book ! Claudia also loves travelling and discovering new cultures."
 	},
 	{
 		"type": "lightning",
@@ -355,7 +394,10 @@
 		"duration": "30",
 		"speaker": "Feross Aboukhadijeh",
 		"slug": "p2p",
-		"img": "feross"
+		"img": "feross",
+		"text": "Let's build something together. Expect P2P, real-time video, and audience participation! More info coming soon.",
+
+		"speaker-info": "Feross is a programmer, designer, teacher, and mad scientist based in Mountain View, CA. He's currently building WebTorrent, a streaming BitTorrent client for the browser, powered by WebRTC. Before that, he built PeerCDN, a peer-to-peer content delivery network to makes sites faster and cheaper. He's a graduate of Stanford University and he has worked at Quora, Facebook, and Intel. In the past, he did research in the Stanford human-computer interaction and computer security labs. On his free time, he works on StudyNotes, a website to help students study better."
 	},
 	{
 		"type": "talk",
@@ -366,7 +408,10 @@
 		"duration": "30",
 		"speaker": "Ben Schwarz",
 		"slug": "beyond-the-bubble",
-		"img": "schwarz"
+		"img": "schwarz",
+		"text": "Every talk you'll hear about 'web performance' will tell you that shaving 100ms from response time produced a 1% sales yield for Amazon.com. While that *is* impressive, there are some more interesting numbers that we need to talk about. Did you know that 43% of the humans on the planet have access to the internet, but 57% do not? Did you know that in 2016 alone India will bring 100 million NEW users to the internet for the very first time? (If you're keeping count, thats double and a half the population of the U.K) — when you take a glance and do some research into the current state of global connectivity, you might realise that the internet you think you know so well exists in an entirely different way. In this talk, through the guise of user-experience and empathy, we'll take a look at the state of connectivity, population, costs of data in order to re-centre how we think about our role as designers and developers for the web today. Every talk you'll hear about 'web performance' will tell you that shaving 100ms from response time produced a 1% sales yield for Amazon.com. While that *is* impressive, there are some more interesting numbers that we need to talk about.",
+
+		"speaker-info": "Ben is a the founder of Calibre, a company dedicated to making the web fast for everyone."
 	},
 	{
 		"type": "misc",
@@ -385,7 +430,10 @@
 		"duration": "30",
 		"speaker": "David Khourshid",
 		"slug": "reactive-web-animations-with-rxjs",
-		"img": "khourshid"
+		"img": "khourshid",
+		"text": "UI animations can be an incredible asset to the user experience, especially if they are meaningful and responsive to user input. In this session, we will discover some new and innovative techniques for creating reactive web animations declaratively, using RxJS. You will learn ways to add native-like transitions and smooth animations that respond to user input, in order to create a delightful experience for your users. And of course, there will be plenty of demos.",
+
+		"speaker-info": "David is a Florida-based web developer, tech author, and international speaker. Also a fervent open-source contributor, he is passionate about JavaScript, CSS, animations, functional programming, and cutting-edge front-end technologies. He is a frequent speaker at various conferences and local front-end meetups. When not behind a computer keyboard, he’s behind a piano keyboard or traveling somewhere new."
 	},
 	{
 		"type": "lightning",
@@ -402,11 +450,10 @@
 		"day": "8",
 		"start": "15:25",
 		"end": "15:30",
-		"title": "Lightning talk: Use any Npm module as a distributed scalable microservice, as easy as NodeJS' \"require\"",
+		"title": "Lightning talk: Use any Npm module as a distributed scalable microservice, as easy as NodeJS require",
 		"duration": "5",
 		"speaker": "Joakim Carlstein",
 		"slug": "use-any-npm-module-as-a-distributed-scalable-microservice"
-
 	},
 	{
 		"type": "misc",
@@ -425,7 +472,8 @@
 		"duration": "30",
 		"speaker": "Guillermo Rauch",
 		"slug": "tbajs",
-		"img": "rauch"
+		"img": "rauch",
+		"text": "Before starting ▲ZEIT in November 2015, Guillermo was the CTO and co-founder of LearnBoost and Cloudup, acquired by Automattic in 2013. He's the creator of several popular Node.JS open source libraries like socket.io, mongoose and slackin. Prior to Node.JS, he was a core developer of the MooTools frontend toolkit."
 	},
 	{
 		"type": "talk",
@@ -436,7 +484,10 @@
 		"duration": "30",
 		"speaker": "Karolina Szczur",
 		"slug": "building-inclusive-communites",
-		"img": "szczur"
+		"img": "szczur",
+		"text": "We’re all a part of a community—design, CSS, JavaScript or any other. But often we fail to reflect on what that actually means and what responsibility it conveys for us as individuals. This talk focuses on understanding what communities are; creating, sustaining and growing them. It offers insight into building participatory culture, fostering empathy and building a better future, together.",
+
+		"speaker-info": "Karolina is a designer and developer living in Melbourne, Australia. She writes extensively about company culture, collaboration and is passionate about improving diversity and inclusion. Karolina also co-organizes JSConf EU, JSConf AU and CSSConf AU."
 	},
 	{
 		"type": "misc",
