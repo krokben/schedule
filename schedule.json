@@ -284,16 +284,6 @@
 		"img": "greif"
 	},
 	{
-		"id": "24",
-		"type": "misc",
-		"day": "7",
-		"start": "22:00",
-		"end": "",
-		"duration": "",
-		"text": "",
-		"title": "The end"
-	},
-	{
 		"id": "25",
 		"type": "talk",
 		"day": "8",

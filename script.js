@@ -18,11 +18,11 @@ function getJSON() {
 		.then(resp => {
 			events = resp;
 			render('7');
-			setInterval(
-				() => {
-					now = new Date();
-					render('7');
-				}, 30000);
+		// 	setInterval(
+		// 		() => {
+		// 			now = new Date();
+		// 			render('7');
+		// 		}, 30000);
 		})
 	;
 }
@@ -77,10 +77,10 @@ function render(day) {
 					<div class="event-misc ${calcSize(event.duration)} ${hasBeen(event)}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
-							<div class="event__line"></div>
+							${event.end ? '<div class="event__line"></div>' : ''}
 							<div class="event__end">${event.end}</div>
 						</div>
-						<div class="event__text event__text--pink ${hasBeen(event) === 'event--past' ? 'event__header--grey' : ''} ${calcSize(event.duration) === 'event--xl' ? 'event__text--top' : null}">
+						<div class="event__text event__text--pink ${hasBeen(event) === 'event--past' ? 'event__header--grey' : ''} ${calcSize(event.duration) === 'event--xl' && event.day !== '8' ? 'event__text--top' : null}">
 							<h3 class="event__header">${excerpt(event.title)}</h3>
 						</div>
 					</div>
@@ -92,7 +92,7 @@ function render(day) {
 					<div class="event ${calcSize(event.duration)} ${hasBeen(event)} ${event.img ? `event--${event.img}` : null}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
-							<div class="event__line"></div>
+							${event.end ? '<div class="event__line"></div>' : ''}
 							<div class="event__end">${event.end}</div>
 						</div>
 						<div class="event__text">
@@ -108,25 +108,41 @@ function render(day) {
 					<div class="event ${calcSize(event.duration)} ${hasBeen(event)}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
-							<div class="event__line"></div>
+							${event.end ? '<div class="event__line"></div>' : ''}
 							<div class="event__end">${event.end}</div>
 						</div>
 						<div class="event__text">
 							<h3 class="event__header ${hasBeen(event) === 'event--past' ? 'event__header--grey' : 'event__header--blue'}">${excerpt(event.title)}</h3>
 							<p class="event__speaker">
-								${event.speaker}${event.link ? `- <a class="event__link ${hasBeen(event) === 'event--past' ? 'event__link--grey' : ''}" target="_blank" href="${event.link}">${event.handle}</a>` : ''}
+								${event.speaker}
 							</p>
 						</div>
 					</div>
 				${event.slug ? `</a>` : ''}
 			`;
-		} else if (event.type === 'overlap') {
-			eventContainer.children[eventContainer.children.length - 1].innerHTML += `
-				${event.slug ?  `<a href="carousel.html#${event.slug}">` : ''}
+		} else if (event.type === 'overlap' && event.day === '7') {
+			eventContainer.children[eventContainer.children.length - 1].children[0].innerHTML += `
+				${event.slug ?  `<a href="carousel.html?event=${event.slug}">` : ''}
 					<div class="event event--overlap ${calcSize(event.duration)} ${hasBeen(event)}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
-							<div class="event__line"></div>
+							${event.end ? '<div class="event__line"></div>' : ''}
+							<div class="event__end">${event.end}</div>
+						</div>
+						<div class="event__text">
+							<h3 class="event__header event__header--blue">${excerpt(event.title)}</h3>
+							<p class="event__speaker">${event.speaker}</p>
+						</div>
+					</div>
+				${event.slug ? `</a>` : ''}
+			`;
+		} else if (event.type === 'overlap' && event.day === '8') {
+			eventContainer.children[eventContainer.children.length - 1].children[1].innerHTML += `
+				${event.slug ? `<a href="carousel.html?event=${event.slug}">` : ''}
+					<div class="event event--overlap ${calcSize(event.duration)} ${hasBeen(event)}">
+						<div class="event__time">
+							<div class="event__start">${event.start}</div>
+							${event.end ? '<div class="event__line"></div>' : ''}
 							<div class="event__end">${event.end}</div>
 						</div>
 						<div class="event__text">

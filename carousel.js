@@ -1,14 +1,19 @@
 const scrollBox = document.querySelector('.scroll-box');
 const eventContainer = document.querySelector('.event-container');
 const carousel = document.querySelector('.carousel');
+let xDown = null;
+let yDown = null;
 
-events = [];
+let renderedEvent;
+let events = [];
 
 // Init
 getJSON();
 
 // Event Listeners
 carousel.addEventListener('click', handleClick);
+scrollBox.addEventListener('touchstart', handleTouchStart, false);
+scrollBox.addEventListener('touchmove', handleTouchMove, false);
 
 
 function handleClick(e) {
@@ -38,11 +43,11 @@ function handleClick(e) {
 }
 
 function scrollerCoaster(targetcoon) {
-	console.log(targetcoon)
 	const x = carousel.clientWidth;
 	const y = 100;
 	const z = targetcoon.id.replace('carouselItem', '');
-	carousel.scrollLeft = Math.max(0, (y * z) - (x - y)/2 + 14);
+	const scrollL = Math.max(0, (y * z) - (x - y)/2 + 14);
+	$('.carousel').stop().animate({scrollLeft: scrollL}, 200, 'linear');
 }
 
 function getUrlParameter(name) {
@@ -56,8 +61,7 @@ function fetchEvent(id) {
 	fetch('schedule.json')
 		.then(resp => resp.json())
 		.then(resp => {
-			const event = resp.find(event => event.id === id);
-			renderEvent(event);
+			renderEvent(resp.find(event => event.id == id));
 			// setInterval(
 			// 	() => {
 			// 		now = new Date();
@@ -72,10 +76,11 @@ function getJSON() {
 		.then(resp => resp.json())
 		.then(resp => {
 			events = resp;
-			renderCarousel('7');
-			const event = events.filter(event => event.slug === getUrlParameter('event'));
-			const element = document.querySelector(`[data-id='${event[0].id}']`);
-			renderEvent(event[0]);
+			const event = events.find(event => event.slug === getUrlParameter('event'));
+			events = events.filter(evt => evt.day === event.day);
+			renderCarousel(event.day);
+			renderEvent(event);
+			const element = document.querySelector(`[data-id='${event.id}']`);
 			element.classList.add('carousel__item--zoom')
 			scrollerCoaster(element);
 			// setInterval(
@@ -104,12 +109,12 @@ function renderCarousel(day) {
 	events.filter(evt => evt.day === day).forEach((evt, i) => {
 		carousel.innerHTML += `
 			<div id="carouselItem${i}" class="carousel__item" data-id=${evt.id}>
-				<div class="carousel__time">${evt.start} - ${evt.end}</div>
+				<div class="carousel__time">${evt.start}${evt.end ? ' - ' + evt.end : ''}</div>
 				<div class="carousel__text">
 					<h2 class="carousel__title ${evt.slug ? 'carousel__title--blue' : ''}">${excerpt(evt.title)}</h2>
 					<p class="carousel__speaker">${evt.speaker ? evt.speaker : ''}</p>
 				</div>
-				<div class="carousel__duration">${evt.duration} min</div>
+				<div class="carousel__duration">${evt.duration ? evt.duration + ' min' : ''}</div>
 			</div>
 		`;
 		window[`carouselItem${i}`] = carousel.querySelector(`#carouselItem${i}`);
@@ -117,11 +122,10 @@ function renderCarousel(day) {
 }
 
 function renderEvent(event) {
+	console.log(event.id)
+	renderedEvent = event;
 	eventContainer.innerHTML = `
 		<a class="back" href="index.html"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-		<div class="trigram">
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</div>
 		<div class="speaker-container"> 
 			<div class="speaker-container__portrait">
 				${event.img ? `<img class="speaker-container__img" src="assets/images/${event.img}.png" />` : ''}	
@@ -136,13 +140,53 @@ function renderEvent(event) {
 			</div>
 		</div>
 		<h1 class="${!event.speaker ? 'speaker-container__title' : ''}">${event.title}</h1>
-		<p class="event-container__time">${event.start} - ${event.end}  (${event.duration}min)</p>
+		<p class="event-container__time">${event.start} ${event.end ? ' - ' + event.end : ''} ${event.duration ? '(' + event.duration + ' min)': ''}</p>
 		<p class="event-container__paragraph">
-			${event.text}
+			${event.text ? event.text : ''}
 		</p>
 	`;
 }
 
-function scrollTo(location) {
-	window.smoothScroll(location);
-}
+function handleTouchStart(evt) {
+	xDown = evt.touches[0].clientX;
+};
+
+function handleTouchMove(evt) {
+	if (!xDown) {
+		return;
+	}
+
+	let xUp = evt.touches[0].clientX;
+
+	let xDiff = xDown - xUp;
+
+	if (xDiff > 0) {
+		/* left swipe */
+		const newEvent = events.find(e => e.id == Number(renderedEvent.id) + 1);
+
+		if (newEvent.id > events.length - 1) return;
+
+		const el = document.querySelector('.carousel__item--zoom');
+		const nextSibling = el.nextElementSibling;
+
+		renderEvent(newEvent);
+		scrollerCoaster(nextSibling);
+		el.classList.remove('carousel__item--zoom');
+		nextSibling.classList.add('carousel__item--zoom');
+	} else {
+		/* right swipe */
+		const newEvent = events[events.indexOf(renderedEvent)-1];
+
+		if (newEvent.id < events[0].id) return;
+		
+		const el = document.querySelector('.carousel__item--zoom');
+		const previousSibling = el.previousElementSibling;
+
+		scrollerCoaster(previousSibling);
+		renderEvent(newEvent);
+		el.classList.remove('carousel__item--zoom');
+		previousSibling.classList.add('carousel__item--zoom');
+	}
+	/* reset values */
+	xDown = null;
+};

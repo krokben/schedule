@@ -34,7 +34,7 @@ h1 {
 }
 
 .days__day:hover {
-	color: #666;
+	color: #FF2DF1;
 }
 
 .days__day--left {
@@ -50,7 +50,6 @@ h1 {
 }
 
 .event {
-	width: 100%;
 	margin-bottom: 10px;
 	padding: 4px;
 	position: relative;
@@ -74,6 +73,7 @@ h1 {
 	/*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
 	/*border: 1px solid #9B9B9B;*/
 	border: 1px solid turquoise;
+	box-sizing: border-box;
 }
 
 .event--overlap {
@@ -98,6 +98,7 @@ h1 {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	color: #333;
 }
 
 .event__start {
