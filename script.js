@@ -73,7 +73,7 @@ function render(day) {
 	events.filter(event => event.day === day).forEach(event => {
 		if (event.type === 'misc') {
 			eventContainer.innerHTML += `
-				${event.slug ?  `<a "href="carousel.html#${event.slug}">` : ''}
+				${event.slug ?  `<a href="carousel.html?event=${event.slug}">` : ''}
 					<div class="event-misc ${calcSize(event.duration)} ${hasBeen(event)}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
@@ -88,7 +88,7 @@ function render(day) {
 			`;
 		} else if (event.type === 'talk') {
 			eventContainer.innerHTML += `
-				${event.slug ?  `<a "href="carousel.html#${event.slug}">` : ''}
+				${event.slug ?  `<a href="carousel.html?event=${event.slug}">` : ''}
 					<div class="event ${calcSize(event.duration)} ${hasBeen(event)} ${event.img ? `event--${event.img}` : null}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
@@ -104,7 +104,7 @@ function render(day) {
 			`;
 		} else if (event.type === 'lightning') {
 			eventContainer.innerHTML += `
-				${event.slug ?  `<a "href="carousel.html#${event.slug}">` : ''}
+				${event.slug ?  `<a href="carousel.html?event=${event.slug}">` : ''}
 					<div class="event ${calcSize(event.duration)} ${hasBeen(event)}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>
@@ -122,7 +122,7 @@ function render(day) {
 			`;
 		} else if (event.type === 'overlap') {
 			eventContainer.children[eventContainer.children.length - 1].innerHTML += `
-				${event.slug ?  `<a "href="carousel.html#${event.slug}">` : ''}
+				${event.slug ?  `<a href="carousel.html#${event.slug}">` : ''}
 					<div class="event event--overlap ${calcSize(event.duration)} ${hasBeen(event)}">
 						<div class="event__time">
 							<div class="event__start">${event.start}</div>

@@ -20,7 +20,7 @@ h1 {
 
 .scroll-box {
 	padding: 20px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -28,9 +28,18 @@ h1 {
 	overflow: auto;
 }
 
+.back {
+	color: #243EFF;
+}
+
 .event-container {
-	margin-top: 60px;
 	margin-bottom: 132px;
+}
+
+.event-container__time {
+	text-align: center;
+	color: #555;
+	margin: 0;
 }
 
 .event-container__paragraph {
@@ -72,13 +81,8 @@ h1 {
 	margin: 0;
 }
 
-header {
-	box-sizing: border-box;
-	width: 100%;
-	position: fixed;
-	padding: 20px;
-	background-color: #fff;
-	z-index: 9999999;
+.speaker-container__title {
+	margin-top: 40px;
 }
 
 .trigram {
