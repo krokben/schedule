@@ -174,7 +174,7 @@ function handleTouchMove(evt) {
 	let xDiff = xDown - xUp;
 
 	console.log(xDiff)
-	if (xDiff > 10) {
+	if (xDiff > 8) {
 		/* left swipe */
 		const newEvent = events.find(e => e.id == Number(renderedEvent.id) + 1);
 
@@ -187,7 +187,7 @@ function handleTouchMove(evt) {
 		scrollerCoaster(nextSibling);
 		el.classList.remove('carousel__item--zoom');
 		nextSibling.classList.add('carousel__item--zoom');
-	} else if (xDiff < -10) {
+	} else if (xDiff < -8) {
 		/* right swipe */
 		const newEvent = events[events.indexOf(renderedEvent)-1];
 
