@@ -13,18 +13,22 @@ day1.addEventListener('click', () => render('7'));
 day2.addEventListener('click', () => render('8'));
 
 function getJSON() {
-	fetch('schedule.json')
-		.then(resp => resp.json())
-		.then(resp => {
-			events = resp;
-			render('7');
-		// 	setInterval(
-		// 		() => {
-		// 			now = new Date();
-		// 			render('7');
-		// 		}, 30000);
-		})
-	;
+	// fetch('http://krokben.se/schedule/schedule.json')
+	// 	.then(resp => resp.json())
+	// 	.then(resp => {
+	// 		events = resp;
+	// 		render('7');
+	// 	// 	setInterval(
+	// 	// 		() => {
+	// 	// 			now = new Date();
+	// 	// 			render('7');
+	// 	// 		}, 30000);
+	// 	})
+	// ;
+	$.get('http://krokben.se/schedule/schedule.json', (resp) => {
+		events = resp;
+		render('7');
+	});
 }
 
 function calcSize(dur) {
