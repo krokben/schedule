@@ -58,38 +58,51 @@ function getUrlParameter(name) {
 };
 
 function fetchEvent(id) {
-	fetch('schedule.json')
-		.then(resp => resp.json())
-		.then(resp => {
-			renderEvent(resp.find(event => event.id == id));
-			// setInterval(
-			// 	() => {
-			// 		now = new Date();
-			// 		render('7');
-			// 	}, 30000);
-		})
-	;
+	// fetch('http://krokben.se/schedule/fileschedule.json')
+	// 	.then(resp => resp.json())
+	// 	.then(resp => {
+	// 		renderEvent(resp.find(event => event.id == id));
+	// 		// setInterval(
+	// 		// 	() => {
+	// 		// 		now = new Date();
+	// 		// 		render('7');
+	// 		// 	}, 30000);
+	// 	})
+	// ;
+	$.get('http://krokben.se/schedule/schedule.json', (resp) => {
+		renderEvent(resp.find(event => event.id == id));
+	});
 }
 
 function getJSON() {
-	fetch('schedule.json')
-		.then(resp => resp.json())
-		.then(resp => {
-			events = resp;
-			const event = events.find(event => event.slug === getUrlParameter('event'));
-			events = events.filter(evt => evt.day === event.day);
-			renderCarousel(event.day);
-			renderEvent(event);
-			const element = document.querySelector(`[data-id='${event.id}']`);
-			element.classList.add('carousel__item--zoom')
-			scrollerCoaster(element);
-			// setInterval(
-			// 	() => {
-			// 		now = new Date();
-			// 		render('7');
-			// 	}, 30000);
-		})
-	;
+	// fetch('http://krokben.se/schedule/fileschedule.json')
+	// 	.then(resp => resp.json())
+	// 	.then(resp => {
+	// 		events = resp;
+	// 		const event = events.find(event => event.slug === getUrlParameter('event'));
+	// 		events = events.filter(evt => evt.day === event.day);
+	// 		renderCarousel(event.day);
+	// 		renderEvent(event);
+	// 		const element = document.querySelector(`[data-id='${event.id}']`);
+	// 		element.classList.add('carousel__item--zoom')
+	// 		scrollerCoaster(element);
+	// 		// setInterval(
+	// 		// 	() => {
+	// 		// 		now = new Date();
+	// 		// 		render('7');
+	// 		// 	}, 30000);
+	// 	})
+	// ;
+	$.get('http://krokben.se/schedule/schedule.json', (resp) => {
+		events = resp;
+		const event = events.find(event => event.slug === getUrlParameter('event'));
+		events = events.filter(evt => evt.day === event.day);
+		renderCarousel(event.day);
+		renderEvent(event);
+		const element = document.querySelector(`[data-id='${event.id}']`);
+		element.classList.add('carousel__item--zoom')
+		scrollerCoaster(element);
+	});
 }
 
 function excerpt(title) {
