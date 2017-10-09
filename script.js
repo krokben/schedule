@@ -60,7 +60,7 @@ function hasBeen(event) {
 
 	if (now > endTime && event.day === '7') {
 		return 'event--past';
-	} else if (now < endTime && now > startTime) {
+	} else if (now < endTime && now > startTime && event.day === '7') {
 		return 'event--current';
 	}
 
