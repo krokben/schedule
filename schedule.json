@@ -196,8 +196,7 @@
 		"title": "Lightning talk: Writing cross-platform editor plugins",
 		"duration": "5",
 		"speaker": "Henric Trotzig",
-		"slug": "writing-cross-platform-editor-plugins",
-		"img": "trotzig"
+		"slug": "writing-cross-platform-editor-plugins"
 	},
 	{
 		"id": "17",
@@ -208,8 +207,7 @@
 		"title": "Lightning talk: Payment Request API in a React high order component",
 		"duration": "5",
 		"speaker": "Marco Lanaro",
-		"slug": "payment-request-api-in-a-react-high-order-component",
-		"img": "lanaro"
+		"slug": "payment-request-api-in-a-react-high-order-component"
 	},
 	{
 		"id": "18",
