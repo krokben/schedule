@@ -65,6 +65,7 @@ a:visited {
 
 .days__day--pink {
 	color: #FF2DF1;
+	font-weight: 900;
 }
 
 .event-container--margin {
