@@ -169,9 +169,23 @@ h1 {
 	padding: 4px;
 	box-sizing: border-box;
 }
+
 .nav-arrow {
 	font-size: 35px;
 	opacity: 0.4;
+	animation: arrow 2s forwards;
+	color: #FF2DF1;
+}
+
+@keyframes arrow {
+	from {
+		/*font-size: 200%;*/
+		opacity: 1;
+	}
+	to {
+		/*font-size: 100%;*/
+		opacity: 0;
+	}
 }
 
 @keyframes zoom-container {
