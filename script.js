@@ -26,7 +26,7 @@ function getJSON() {
 	// 	})
 	// ;
 	$.get('schedule.json', (resp) => {
-		events = JSON.parse(resp);
+		events = resp;
 		render('7');
 	});
 }

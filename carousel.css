@@ -29,11 +29,14 @@ h1 {
 }
 
 .back {
+	position: absolute;
+	top: 20px;
+	left: 20px;
 	color: #243EFF;
 }
 
 .event-container {
-	margin-bottom: 132px;
+	margin-bottom: 150px;
 }
 
 .event-container__time {
@@ -95,7 +98,7 @@ h1 {
 	display: flex;
 	box-sizing: border-box;
 	background-color: #fff;
-	height: 150px;
+	height: 175px;
 	padding: 15px;
 	position: fixed;
 	bottom: 0;
@@ -127,6 +130,7 @@ h1 {
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 	z-index: 1;
+	opacity: 1 !important;
 }
 
 .carousel__item--zoom-reverse {
@@ -154,9 +158,20 @@ h1 {
 }
 
 .carousel__speaker {
-	font-size: 9px;
+	font-size: 0.8em;
 	font-style: italic;
 	margin: 0;
+}
+
+.event--past {
+	opacity: 0.6;
+}
+
+.event--current {
+	/*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+	/*border: 1px solid #9B9B9B;*/
+	border: 2px solid #ff68f5;
+	/*box-sizing: border-box;*/
 }
 
 .nav-arrows-container {
@@ -171,9 +186,9 @@ h1 {
 }
 
 .nav-arrow {
-	font-size: 35px;
-	opacity: 0.4;
-	animation: arrow 2s forwards;
+	font-size: 25px;
+	animation: arrow 1s forwards;
+	animation-delay: 0.5s;
 	color: #FF2DF1;
 }
 

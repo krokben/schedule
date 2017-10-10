@@ -70,7 +70,7 @@ function fetchEvent(id) {
 	// 	})
 	// ;
 	$.get('schedule.json', (resp) => {
-		renderEvent(JSON.parse(resp).find(event => event.id == id));
+		renderEvent(resp.find(event => event.id == id));
 	});
 }
 
@@ -94,7 +94,7 @@ function getJSON() {
 	// 	})
 	// ;
 	$.get('schedule.json', (resp) => {
-		events = JSON.parse(resp);
+		events = resp;
 		const event = events.find(event => event.slug === getUrlParameter('event'));
 		events = events.filter(evt => evt.day === event.day);
 		renderCarousel(event.day);
@@ -121,7 +121,7 @@ function renderCarousel(day) {
 	carousel.innerHTML = '';
 	events.filter(evt => evt.day === day).forEach((evt, i) => {
 		carousel.innerHTML += `
-			<div id="carouselItem${i}" class="carousel__item" data-id=${evt.id}>
+			<div id="carouselItem${i}" class="carousel__item ${hasBeen(evt)}" data-id=${evt.id}>
 				<div class="carousel__time">${evt.start}${evt.end ? ' - ' + evt.end : ''}</div>
 				<div class="carousel__text">
 					<h2 class="carousel__title ${evt.slug ? 'carousel__title--blue' : ''}">${excerpt(evt.title)}</h2>
@@ -145,7 +145,7 @@ function renderEvent(event) {
 				<span class="nav-arrow nav-arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
 			</div>
 			<div class="speaker-container__portrait">
-				${event.img ? `<img class="speaker-container__img" src="assets/images/${event.img}.png" />` : ''}	
+				${event.img ? `<img class="speaker-container__img" src="assets/images/${event.img}.png" />` : ''}
 			</div>
 			<div class="speaker-container__text">
 				<div>
@@ -162,6 +162,23 @@ function renderEvent(event) {
 			${event.text ? event.text : ''}
 		</p>
 	`;
+}
+
+function hasBeen(event) {
+	const start = event.start.split(':');
+	const end = event.end.split(':');
+	const now = new Date();
+	const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), start[0], start[1]);
+	const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), end[0], end[1]);
+
+
+	if (now > endTime && event.day === '7') {
+		return 'event--past';
+	} else if (now < endTime && now > startTime && event.day === '7') {
+		return 'event--current';
+	}
+
+	return '';
 }
 
 function handleTouchStart(evt) {
@@ -196,7 +213,7 @@ function handleTouchMove(evt) {
 		const newEvent = events[events.indexOf(renderedEvent)-1];
 
 		if (newEvent.id < events[0].id) return;
-		
+
 		const el = document.querySelector('.carousel__item--zoom');
 		const previousSibling = el.previousElementSibling;
 
