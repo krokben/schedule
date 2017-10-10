@@ -14,15 +14,33 @@ h1 {
 	text-align: center;
 }
 
+a:visited {
+	color: #000;
+}
+
 .trigram {
 	float: right;
 	color: #243EFF;
 }
 
 .days {
+	display: flex;
+	justify-content: space-between;
 	height: 28px;
-	margin: 0 5% 10px 5%;
+	padding: 15px 5% 10px 5%;
 	border-bottom: 1px solid #E3E3E3;
+}
+
+.fixed-header.fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	z-index: 9808;
+	background-color: #fff;
 }
 
 .days__day {
@@ -38,15 +56,19 @@ h1 {
 }
 
 .days__day--left {
-	float: left;
+
 }
 
 .days__day--right {
-	float: right;
+
 }
 
 .days__day--pink {
 	color: #FF2DF1;
+}
+
+.event-container--margin {
+	margin-top: 94px;
 }
 
 .event {
@@ -128,12 +150,11 @@ h1 {
 }
 
 .event__text--pink {
-	color: #FF2DF1;
 	text-align: center;
 }
 
 .event__link {
-	color: #FF2DF1;
+	color: #000;
 	text-decoration: none;
 }
 

@@ -44,10 +44,10 @@ function handleClick(e) {
 
 function scrollerCoaster(targetcoon) {
 	const x = carousel.clientWidth;
-	const y = 100;
+	const y = 120;
 	const z = targetcoon.id.replace('carouselItem', '');
-	const scrollL = Math.max(0, (y * z) - (x - y)/2 + 14);
-	$('.carousel').stop().animate({scrollLeft: scrollL}, 200, 'linear');
+	const scrollL = Math.max(0, (y * z) - (x - y)/2 + 17);
+	$('.carousel').stop().animate({scrollLeft: scrollL}, 400, 'linear');
 }
 
 function getUrlParameter(name) {
@@ -69,8 +69,8 @@ function fetchEvent(id) {
 	// 		// 	}, 30000);
 	// 	})
 	// ;
-	$.get('http://krokben.se/schedule/schedule.json', (resp) => {
-		renderEvent(resp.find(event => event.id == id));
+	$.get('schedule.json', (resp) => {
+		renderEvent(JSON.parse(resp).find(event => event.id == id));
 	});
 }
 
@@ -93,8 +93,8 @@ function getJSON() {
 	// 		// 	}, 30000);
 	// 	})
 	// ;
-	$.get('http://krokben.se/schedule/schedule.json', (resp) => {
-		events = resp;
+	$.get('schedule.json', (resp) => {
+		events = JSON.parse(resp);
 		const event = events.find(event => event.slug === getUrlParameter('event'));
 		events = events.filter(evt => evt.day === event.day);
 		renderCarousel(event.day);
@@ -139,7 +139,11 @@ function renderEvent(event) {
 	renderedEvent = event;
 	eventContainer.innerHTML = `
 		<a class="back" href="index.html"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-		<div class="speaker-container"> 
+		<div class="speaker-container">
+			<div class="nav-arrows-container">
+				<span class="nav-arrow nav-arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+				<span class="nav-arrow nav-arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+			</div>
 			<div class="speaker-container__portrait">
 				${event.img ? `<img class="speaker-container__img" src="assets/images/${event.img}.png" />` : ''}	
 			</div>

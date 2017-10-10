@@ -25,8 +25,8 @@ function getJSON() {
 	// 	// 		}, 30000);
 	// 	})
 	// ;
-	$.get('http://krokben.se/schedule/schedule.json', (resp) => {
-		events = resp;
+	$.get('schedule.json', (resp) => {
+		events = JSON.parse(resp);
 		render('7');
 	});
 }
@@ -167,4 +167,33 @@ function render(day) {
 		day2.classList.add('days__day--pink');
 		day1.classList.remove('days__day--pink');
 	}
+
+	scrollToCurrent(day);
 }
+
+function scrollToCurrent(day) {
+	if (day !== '7') {
+		$('html, body').animate({
+			scrollTop: 57,
+		});
+	} else {
+		const offset = $('.event--current').offset();
+
+		offset.top -= 57;
+
+		$('html, body').animate({
+			scrollTop: offset.top,
+		});
+	}
+}
+
+$(window).scroll(function () {
+	if ($(window).scrollTop() >= 135) {
+		$('.fixed-header').addClass('fixed');
+		$('.event-container').addClass('event-container--margin');
+	}
+	else {
+		$('.fixed-header').removeClass('fixed');
+		$('.event-container').removeClass('event-container--margin');
+	}
+});

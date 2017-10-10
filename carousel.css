@@ -19,7 +19,7 @@ h1 {
 }
 
 .scroll-box {
-	padding: 20px;
+	padding: 40px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -44,6 +44,7 @@ h1 {
 
 .event-container__paragraph {
 	text-align: justify;
+	font-size: 14px;
 }
 
 .speaker-container {
@@ -94,7 +95,7 @@ h1 {
 	display: flex;
 	box-sizing: border-box;
 	background-color: #fff;
-	height: 132px;
+	height: 150px;
 	padding: 15px;
 	position: fixed;
 	bottom: 0;
@@ -111,13 +112,14 @@ h1 {
 	flex-direction: column;
 	justify-content: space-between;
 	box-sizing: border-box;
-	min-width: 100px;
-	width: 100px;
-	height: 100px;
+	min-width: 120px;
+	width: 120px;
+	height: 120px;
 	padding: 5px;
-	font-size: 11px;
+	font-size: 12px;
 	text-align: center;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	border: 1px solid #C3C2C2;
 }
 
 .carousel__item--zoom {
@@ -157,19 +159,34 @@ h1 {
 	margin: 0;
 }
 
+.nav-arrows-container {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	top: 40%;
+	left: 0;
+	padding: 4px;
+	box-sizing: border-box;
+}
+.nav-arrow {
+	font-size: 35px;
+	opacity: 0.4;
+}
+
 @keyframes zoom-container {
 	from {
-		min-width: 100px;
-		width: 100px;
-		height: 100px;
-		font-size: 11px;
-		margin: 0;
-	}
-	to {
 		min-width: 120px;
 		width: 120px;
 		height: 120px;
-		font-size: 13px;
+		font-size: 12px;
+		margin: 0;
+	}
+	to {
+		min-width: 144px;
+		width: 144px;
+		height: 144px;
+		font-size: 15px;
 		margin: -10px;
 	}
 }
