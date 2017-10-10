@@ -179,7 +179,7 @@ function scrollToCurrent(day) {
 	} else {
 		const offset = $('.event--current').offset();
 
-		offset.top -= 57;
+		offset.top -= 54;
 
 		$('html, body').animate({
 			scrollTop: offset.top,
