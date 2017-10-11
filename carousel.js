@@ -124,7 +124,7 @@ function renderCarousel(day) {
 			<div id="carouselItem${i}" class="carousel__item ${hasBeen(evt)}" data-id=${evt.id}>
 				<div class="carousel__time">${evt.start}${evt.end ? ' - ' + evt.end : ''}</div>
 				<div class="carousel__text">
-					<h2 class="carousel__title ${evt.slug ? 'carousel__title--blue' : ''}">${excerpt(evt.title)}</h2>
+					<h2 class="carousel__title ${evt.slug && hasBeen(evt) !== 'event--past' ? 'carousel__title--blue' : ''}">${excerpt(evt.title)}</h2>
 					<p class="carousel__speaker">${evt.speaker ? evt.speaker : ''}</p>
 				</div>
 				<div class="carousel__duration">${evt.duration ? evt.duration + ' min' : ''}</div>
